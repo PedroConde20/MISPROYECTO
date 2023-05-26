@@ -1,0 +1,40 @@
+﻿<Window x:Class="KapDB.Cliente.winFindClientByName"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KapDB.Cliente"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}" 
+        WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" BorderBrush="#FF2E2A25" BorderThickness="2" Loaded="Window_Loaded"
+        Title="winFindClientByName" Height="500" Width="600">
+    <Grid >
+        <StackPanel>
+            <Grid Background="#FF2D2D35" Height="39" Margin="0,0,-0.2,0" >
+                <Button x:Name="btnClose" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Click="btnClose_Click" FontWeight="Bold">
+                    <materialDesign:PackIcon Kind="Close" Width="30" Height="40" Foreground="Black"></materialDesign:PackIcon>
+                </Button>
+            </Grid>
+            <materialDesign:ColorZone  Height="54" >
+                <TextBlock  FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" VerticalAlignment="Center" FontSize="38" FontWeight="Bold" Margin="96,0,61,8" HorizontalAlignment="Center" Width="439"><Run Text="Seleccionar "/><Run Text="Producto"/></TextBlock>
+            </materialDesign:ColorZone>
+
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="10,10,0,10" Width="577">
+                <materialDesign:PackIcon Kind="ShoppingCart" Height="25" Width="25" Margin="5"/>
+                <TextBox FontFamily="Bahnschrift Light" Background="White" x:Name="txtFind" Width="212" materialDesign:HintAssist.Hint="Nombre del Producto" materialDesign:HintAssist.IsFloating="True" TextChanged="txtFind_TextChanged" Height="37"/>
+                <Button x:Name="Select" Content="Seleccionar" Width="120" Margin="10" Background="#FF027111" FontFamily="Bahnschrift Light" Click="Select_Click"/>
+                <TextBox FontFamily="Bahnschrift Light" Margin="10" Background="White" x:Name="txtQuantity" Width="92" materialDesign:HintAssist.Hint="Cantidad" materialDesign:HintAssist.IsFloating="True"/>
+            </StackPanel>
+            <StackPanel>
+                <DataGrid FontFamily="Bahnschrift Light" Background="#FFDAA10D" x:Name="dgvDatos" Width="auto " Margin="10,10,9.8,10" Height="303" Loaded="dgvDatos_Loaded" IsReadOnly="True" CanUserAddRows="False" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

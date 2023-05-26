@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="KapDB.AcercaDe.uscAcercaDe"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KapDB.AcercaDe"
+             d:DesignHeight="450" d:DesignWidth="800"
+             mc:Ignorable="d" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}" >
+    <Grid Margin="10">
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="444" Height="499" Margin="-14,-31,0,-38">
+            <TextBlock Margin="128,23,102,372" VerticalAlignment="Center" FontSize="20" HorizontalAlignment="Center" Foreground="White" Height="35" Width="188" >
+            Nuestra Historia
+            </TextBlock>
+            <TextBlock Margin="10,98,3,25"  VerticalAlignment="Center" FontSize="13" HorizontalAlignment="Center" Foreground="White" Height="376" Width="431"><Run FontSize="18" Text="Propietarios Henry Valdez Frias y Marina Gramovich"/><LineBreak/><Run FontSize="18" Text="Habiendo estudiado juntos en Rusia, han unido sus"/><LineBreak/><Run FontSize="18" Text="historias y pasiones  para establecer Hizval Vinos "/><LineBreak/><Run FontSize="18" Text="de Altura"/><Run FontSize="18" Text="."/><LineBreak/><Run FontSize="18" Text="Ubicada en el Barrio El Portillo en la Ciudad de"/><LineBreak/><Run FontSize="18" Text="Tarija Cercado. "/><LineBreak/><Run FontSize="18" Text="Habiendo cultivado el amor por el vino y "/><LineBreak/><Run FontSize="18" Text="los viajes durante sus mas de 10 años "/><LineBreak/><Run FontSize="18" Text="desde su creación con la ayuda de Colegas de "/><LineBreak/><Run FontSize="18" Text="L"/><Run FontSize="18" Text="a Universidad Juan Misael Saracho de Tarija."/><LineBreak/><Run FontSize="18" Text="Henry y Marina se inspiraron para crear una "/><LineBreak/><Run FontSize="18" Text="experiencia"/><Run FontSize="18" Text=" "/><Run FontSize="18" Text="local única combinando sus paciones"/><Run FontSize="18" Text=" "/><LineBreak/><Run FontSize="18"/><Run FontSize="18" Text="por el vino"/><Run FontSize="18" Text=" "/><Run FontSize="18" Text="al estilo del viejo mundo, "/><LineBreak/><Run FontSize="18" Text="la música chapaca y "/><LineBreak/><Run FontSize="18" Text="la atracción de personas. Juntos."/><LineBreak/><LineBreak/><Run/><Run/><LineBreak/><Run/></TextBlock>
+        </Grid>
+        <Grid Margin="0,0,-16,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="448" Height="430">
+            <TextBlock Margin="128,23,102,372" VerticalAlignment="Center" FontSize="20" HorizontalAlignment="Center" Foreground="White" Height="35" Width="188" >
+            Nuestra Filosofia
+            </TextBlock>
+            <TextBlock Margin="20,63,-50,-28"  VerticalAlignment="Center" FontSize="13" HorizontalAlignment="Center" Foreground="White" Height="395" Width="460"><Run FontSize="18" Text="En Hizval, el arte de la elaboracion del vino es "/><LineBreak/><Run FontSize="18" Text="mucho mas que el proceso de convertir las uvas"/><LineBreak/><Run FontSize="18" Text="en vino. Mas bien, es una pasion y expresion del "/><LineBreak/><Run FontSize="18" Text="criclo de vida &quot;Bud to Bottle&quot;. Utilizamos tecnicas"/><LineBreak/><Run FontSize="18" Text="del Viejo Mundo con fermentacion y procesamiento"/><LineBreak/><Run FontSize="18" Text="que combinan la precision de la elaboracion"/><LineBreak/><Run FontSize="18" Text="del vino con una expresion artistica creativa."/><LineBreak/><Run FontSize="18" Text="Para nosotros, el concepto de Terruño es "/><LineBreak/><Run FontSize="18" Text="fundamental para la creacion de un gran vino."/><LineBreak/><Run FontSize="18" Text="El Terruño se crea con las condiciones ambientales"/><LineBreak/><Run FontSize="18" Text="especialmente con el suelo y el clima, en el que "/><LineBreak/><Run FontSize="18" Text="se cultivan las uvas , lo que le da al vino su sabor y"/><LineBreak/><Run FontSize="18" Text="aroma unicos."/><LineBreak/><Run FontSize="18" Text="Usando tecnicas organicas y sostenibles, estamos"/><LineBreak/><Run FontSize="18" Text="comprometidos a minimizar el uso de quimicos e"/><LineBreak/><Run FontSize="18" Text="insecticidas mientras maximizamos los nutrientes"/><LineBreak/><Run FontSize="18" Text="organicos y micronutrientes."/></TextBlock>
+        </Grid>
+    </Grid>
+</UserControl>

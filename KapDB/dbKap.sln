@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KapDB", "ValcotDB\KapDB.csproj", "{132D2CD3-6B40-4BAF-A242-B69BD08E3BC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO.interfaces", "DAO.interfaces\DAO.interfaces.csproj", "{4BF03609-3425-488E-AB99-0900B6AB1A6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO.Implementation", "DAO.Implementation\DAO.Implementation.csproj", "{E7D56DEA-8DAD-419B-B59B-E2968375CD95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO.Model", "DAO.Model\DAO.Model.csproj", "{920B6E9D-2C48-4D34-943D-21D2C14F36E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{132D2CD3-6B40-4BAF-A242-B69BD08E3BC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{132D2CD3-6B40-4BAF-A242-B69BD08E3BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{132D2CD3-6B40-4BAF-A242-B69BD08E3BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{132D2CD3-6B40-4BAF-A242-B69BD08E3BC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BF03609-3425-488E-AB99-0900B6AB1A6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BF03609-3425-488E-AB99-0900B6AB1A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BF03609-3425-488E-AB99-0900B6AB1A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BF03609-3425-488E-AB99-0900B6AB1A6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7D56DEA-8DAD-419B-B59B-E2968375CD95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7D56DEA-8DAD-419B-B59B-E2968375CD95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7D56DEA-8DAD-419B-B59B-E2968375CD95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7D56DEA-8DAD-419B-B59B-E2968375CD95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{920B6E9D-2C48-4D34-943D-21D2C14F36E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{920B6E9D-2C48-4D34-943D-21D2C14F36E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{920B6E9D-2C48-4D34-943D-21D2C14F36E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{920B6E9D-2C48-4D34-943D-21D2C14F36E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4AB7AAEE-44D7-4FB9-9AF1-8599C82B487B}
+	EndGlobalSection
+EndGlobal

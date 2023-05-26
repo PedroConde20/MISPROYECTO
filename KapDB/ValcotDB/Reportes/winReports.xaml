@@ -1,0 +1,54 @@
+﻿<Window x:Class="KapDB.Reportes.winReports"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KapDB.Reportes"
+        mc:Ignorable="d"   xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}" 
+        WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" BorderBrush="#FF2E2A25" BorderThickness="2"
+     Title="winReportes" Height="550" Width="900">
+    <Grid>
+        <StackPanel>
+            <Grid Background="#FFE4CB54" Height="59" Margin="0,0,-0.2,0" >
+                <Button x:Name="btnClose" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Click="btnClose_Click" FontWeight="Bold">
+                    <materialDesign:PackIcon Kind="Close" Width="25" Height="25" Foreground="White"></materialDesign:PackIcon>
+                </Button>
+                <TextBlock FontSize="40" Text="Reportes" VerticalAlignment="Center" FontFamily="Bahnschrift Light"  HorizontalAlignment="Center" Margin="10"  Foreground="White" FontWeight="ExtraBold" TextDecorations="{x:Null}"/>
+            </Grid>
+        </StackPanel>
+        <StackPanel>
+            <Grid/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <Grid Margin="0,49,0,0.2" Width="899">
+                <Button x:Name="btnIngresoVenta" FontSize="25"  FontFamily="Bahnschrift Light" Margin="39,142,637,92" Click="btnIngresoVenta_Click" BorderBrush="#FFDC7114" Height="Auto">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ValcotDB;component/Imagenes/ingreso.png" Stretch="UniformToFill"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnIngresoCategoria"  FontSize="30"  FontFamily="Bahnschrift Light" Margin="321,142,337,91" Click="btnIngresoCategoria_Click" BorderBrush="Orange" Height="Auto">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ValcotDB;component/Imagenes/categoryReport.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnHistoricoVenta"  FontSize="30"  FontFamily="Bahnschrift Light" Margin="613,141,39,92" Click="btnHistoricoVenta_Click" BorderBrush="#FFEE6A4D" Height="Auto" RenderTransformOrigin="0.5,0.5">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ValcotDB;component/Imagenes/historic.png"/>
+                    </Button.Background>
+                </Button>
+                <TextBox HorizontalAlignment="Left" Foreground="#FFDC7114" Height="37" Margin="39,53,0,0" TextWrapping="Wrap" FontFamily="Bahnschrift Light" Text="INGRESOS POR VENTA" VerticalAlignment="Top" Width="223" FontWeight="Bold" FontSize="20"/>
+                <TextBox HorizontalAlignment="Left" Foreground="#FFDC7114" Height="37" Margin="305,53,0,0" TextWrapping="Wrap" FontFamily="Bahnschrift Light" Text="INGRESOS POR CATEGORIA" VerticalAlignment="Top" Width="257" FontWeight="Bold" FontSize="20"/>
+                <TextBox HorizontalAlignment="Left" Foreground="#FFDC7114" Height="37" Margin="629,53,0,0" TextWrapping="Wrap" FontFamily="Bahnschrift Light" Text="HISTORICO DE VENTAS" VerticalAlignment="Top" Width="216" FontWeight="Bold" FontSize="20"/>
+            </Grid>
+        </StackPanel>
+
+    </Grid>
+</Window>

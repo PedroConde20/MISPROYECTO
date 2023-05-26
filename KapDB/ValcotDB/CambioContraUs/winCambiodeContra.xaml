@@ -1,0 +1,49 @@
+﻿<Window x:Class="KapDB.CambioContraUs.winCambiodeContra"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KapDB.CambioContraUs"
+        mc:Ignorable="d"
+        Title="winCambiodeContra" Height="340" Width="400" WindowStartupLocation="CenterScreen"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+         TextElement.FontWeight="Regular"
+         TextElement.FontSize="13"
+         TextOptions.TextFormattingMode="Ideal"
+         TextOptions.TextRenderingMode="Auto"
+         Background="{DynamicResource MaterialDesignPaper}"
+         FontFamily="{DynamicResource MaterialDesignFont}"
+            WindowState="Normal" WindowStyle="None">
+    <Grid Background="White">
+
+        <Grid  Height = "61" VerticalAlignment="Top" Background="#FF2D2D35">
+
+
+            <Button x:Name="btnClose" Width="57" Height="51" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Click="btnClose_Click" FontWeight="Bold">
+                <materialDesign:PackIcon Kind="Close" Width="50" Height="50" Foreground="White"></materialDesign:PackIcon>
+            </Button>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,10,0,0">
+                <materialDesign:PackIcon Kind="Password" Width="66" Height="48" Foreground="White" VerticalAlignment="Center" Margin="0,-2,0,5"/>
+                <TextBlock FontFamily="Bahnschrift Light" Foreground="White" Text="Nueva Contraseña" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold" Margin="10,12,0,7" Height="32" Width="222"/>
+            </StackPanel>
+        </Grid>
+        <StackPanel Margin="0,61,0,0" >
+            <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center">
+
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="10" HorizontalAlignment="Center" Height="145" Width="375">
+                <Label HorizontalAlignment="Center" Content="Contraseña:" Foreground="Black" FontSize="14" FontWeight="Bold" FontFamily="Bahnschrift Light" Margin="5"/>
+                <PasswordBox  x:Name="txtContraseña" Width="161" IsEnabled="False" FontFamily="Bahnschrift Light" Margin="5"/>
+                <Label HorizontalAlignment="Center" Content="Repite Contraseña:" Foreground="Black" FontSize="14" FontFamily="Bahnschrift Light" FontWeight="Bold" Margin="5"/>
+                <PasswordBox  x:Name="txtRepetirContraseña" Width="110" IsEnabled="False" FontFamily="Bahnschrift Light" Margin="5"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Button x:Name="btnUpdate" FontFamily="Bahnschrift Light" Content="Modificar" Width="110" Margin="5" Click="btnUpdate_Click" Background="#FFDAA10D" BorderBrush="#FFDAA10D"/>
+                <Button x:Name="btnSave" FontFamily="Bahnschrift Light" Content="Guardar" Width="110" Margin="5" IsEnabled="False" Background="#FF027111" BorderBrush="#FF04BD19" Click="btnSave_Click"/>
+                <Button x:Name="btnCancerlar" FontFamily="Bahnschrift Light" Content="Cancelar" Width="110" Margin="5" IsEnabled="False" Click="btnCancerlar_Click" Background="#FF027111" BorderBrush="#FF04BD19"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
