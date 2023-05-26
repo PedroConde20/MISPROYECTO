@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\ProyectoFinalBDD\KapDB\ValcotDB\obj\Debug\
+C:\Users\Pedro\Desktop\KAP MIS\ManagementInformationSystem\KapDB\ValcotDB\obj\Debug\
 ValcotDB
 none
 false
 DEBUG;TRACE
-E:\ProyectoFinalBDD\KapDB\ValcotDB\App.xaml
-16-506661365
+C:\Users\Pedro\Desktop\KAP MIS\ManagementInformationSystem\KapDB\ValcotDB\App.xaml
+17-1822666062
 
-27-2101605778
-27-516539559
-AcercaDe\uscAcercaDe.xaml;CambioContraUs\winCambiodeContra.xaml;Cliente\winAdmClients.xaml;Cliente\winFindClientByName.xaml;MainWindow.xaml;OlvidoPassword\winOlvidoPassword.xaml;Reportes\winCristalReportCategory.xaml;Reportes\winCristarlReportOne.xaml;Reportes\winReports.xaml;Stock\uscStock.xaml;Stock\winAdmProductosCategoria.xaml;Stock\winIngresoProductos.xaml;Transacciones\winReceipt.xaml;Transacciones\winTransaction.xaml;Users\winLogin.xaml;Usuarios\Usuarios.xaml;
+28-558279438
+27-158388728
+AcercaDe\uscAcercaDe.xaml;CambioContraUs\winCambiodeContra.xaml;Cliente\winAdmClients.xaml;Cliente\winFindClientByName.xaml;MainWindow.xaml;OlvidoPassword\winOlvidoPassword.xaml;Proveedor\Proveedor.xaml;Reportes\winCristalReportCategory.xaml;Reportes\winCristarlReportOne.xaml;Reportes\winReports.xaml;Stock\uscStock.xaml;Stock\winAdmProductosCategoria.xaml;Stock\winIngresoProductos.xaml;Transacciones\winReceipt.xaml;Transacciones\winTransaction.xaml;Users\winLogin.xaml;Usuarios\Usuarios.xaml;
 
 True
 
