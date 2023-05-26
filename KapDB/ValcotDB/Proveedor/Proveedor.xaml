@@ -14,7 +14,7 @@
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}" 
         WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" BorderBrush="#FF2E2A25" BorderThickness="2" Loaded="Window_Loaded"
-        Title="Proveedor" Height="450" Width="800">
+        Title="Proveedor" Height="572" Width="800">
     <Grid>
         <StackPanel>
             <Grid Background="#FFE4CB54" Height="60">
@@ -27,21 +27,26 @@
             <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Left">
                 <Label Content="Nombre del Proveedor:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
                 <TextBox FontFamily="Bahnschrift Light" x:Name="txtNombreProveedor" Width="200" Margin="5" />
-                <Label Content="NIT del Proveedor:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
-                <TextBox FontFamily="Bahnschrift Light" x:Name="txtCodigoProveedor" Width="100" Margin="5" />
+                <Label Content="Apellido del Proveedor:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
+                <TextBox FontFamily="Bahnschrift Light" x:Name="txtApellidoProveedor" Width="200" Margin="5" Cursor="IBeam" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Left">
+                <Label Content="CI/NIT del Proveedor:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
+                <TextBox FontFamily="Bahnschrift Light" x:Name="txtCodigoProveedor" Width="100" Margin="5" />
                 <Label Content="Dirección:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
                 <TextBox FontFamily="Bahnschrift Light" x:Name="txtDireccion" Width="200" Margin="5" />
-                <Label FontFamily="Bahnschrift Light" Content="Teléfono:" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Left">
+                <Label Content="Teléfono:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
                 <TextBox FontFamily="Bahnschrift Light" x:Name="txtTelefono" Width="100" Margin="5" />
-                <Label FontFamily="Bahnschrift Light" Content="E-Mail:" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
+                <Label Content="E-Mail:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
                 <TextBox FontFamily="Bahnschrift Light" x:Name="txtemail" Width="200" Margin="5" />
             </StackPanel>
 
             <StackPanel>
-                <DataGrid Background="#fadc9b" x:Name="dgvDatos" Width="auto " Margin="10,10,9.8,10" Height="250" IsReadOnly="True" CanUserAddRows="False" SelectionChanged="dgvDatos_SelectionChanged" />
+                <DataGrid Background="#fadc9b" x:Name="dgvDatos" Width="auto" Margin="10" Height="250" IsReadOnly="True" CanUserAddRows="False" SelectionChanged="dgvDatos_SelectionChanged" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
