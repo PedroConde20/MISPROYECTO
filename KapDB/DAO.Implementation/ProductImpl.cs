@@ -44,7 +44,7 @@ namespace DAO.Implementation
             Product t = null;
             System.Diagnostics.Debug.WriteLine(string.Format("{0} - User: {1} Inicializando el Metodo Get de la Tabla ProductImpl", DateTime.Now, Session.SessionID));
             string query = @"SELECT productID, productName, price, [Image] , stock , descriptionProduct,categoryID,status,registerDate,
-                            lastUpdate, UserID
+                            lastUpdate, UserID, supplierID
                             FROM ProductList
                             WHERE productID =@wineID";
 
@@ -58,7 +58,7 @@ namespace DAO.Implementation
                 System.Diagnostics.Debug.WriteLine(string.Format("{0} - User: {1}  Metodo Get Ejecutado Correctamente", DateTime.Now, Session.SessionID));
                 while (dr.Read())
                 {
-                    t = new Product(byte.Parse(dr[0].ToString()), dr[1].ToString(), double.Parse(dr[2].ToString()),int.Parse(dr[3].ToString()), int.Parse(dr[4].ToString()), dr[5].ToString(), byte.Parse(dr[6].ToString()), byte.Parse(dr[7].ToString()), DateTime.Parse(dr[8].ToString()), DateTime.Parse(dr[9].ToString()), short.Parse(dr[10].ToString()));
+                    t = new Product(byte.Parse(dr[0].ToString()), dr[1].ToString(), double.Parse(dr[2].ToString()), int.Parse(dr[3].ToString()), int.Parse(dr[4].ToString()), dr[5].ToString(), byte.Parse(dr[6].ToString()), byte.Parse(dr[7].ToString()), DateTime.Parse(dr[8].ToString()), DateTime.Parse(dr[9].ToString()), short.Parse(dr[10].ToString()), byte.Parse(dr[11].ToString()));
                 }
             }
             catch (Exception ex)
@@ -76,8 +76,8 @@ namespace DAO.Implementation
         public int Insert(Product t)
         {
             int res = 0;
-            string query = @"INSERT INTO ProductList(categoryID,productName,price,[image],stock,descriptionProduct,lastUpdate,UserID)
-                            VALUES (@categoryID,@productName,@price,@image,@stock,@descriptionProduct,CURRENT_TIMESTAMP,@UserID)";
+            string query = @"INSERT INTO ProductList(categoryID,productName,price,[image],stock,descriptionProduct,lastUpdate,UserID, supplierID)
+                            VALUES (@categoryID,@productName,@price,@image,@stock,@descriptionProduct,CURRENT_TIMESTAMP,@UserID,@supplierID)";
             try
             {
                 SqlCommand command = DataBase.CreateBasicCommand(query);
@@ -88,6 +88,7 @@ namespace DAO.Implementation
                 command.Parameters.AddWithValue("@stock", t.Stock);
                 command.Parameters.AddWithValue("@descriptionProduct", t.DescriptionProduct);
                 command.Parameters.AddWithValue("@UserID", t.UserID);
+                command.Parameters.AddWithValue("@supplierID", t.SupplierID);
                 res = DataBase.ExecuteBasicCommand(command);
                 System.Diagnostics.Debug.WriteLine(string.Format("{0} - User: {1}  Metodo Insert Ejecutado Correctamente", DateTime.Now, Session.SessionID));
             }
@@ -161,8 +162,7 @@ namespace DAO.Implementation
             System.Diagnostics.Debug.WriteLine(string.Format("{0} - User: {1} Inicializando el Metodo Update de la Tabla Wine Update", DateTime.Now, Session.SessionID));
             string query = @"UPDATE ProductList SET categoryID = @categoryID, productName = @productName , price = @price, [image] =1 , stock = @stock,
 					        descriptionProduct= @descriptionProduct, lastUpdate = CURRENT_TIMESTAMP,
-
-                            UserID = @UserID
+                            UserID = @UserID, supplierID = @supplierID
 					        WHERE productID = @wineID";
             try
             {
@@ -174,7 +174,9 @@ namespace DAO.Implementation
                 command.Parameters.AddWithValue("@stock", t.Stock);
                 command.Parameters.AddWithValue("@descriptionProduct", t.DescriptionProduct);
                 command.Parameters.AddWithValue("@UserID", t.UserID);
+                command.Parameters.AddWithValue("@supplierID", t.SupplierID);
                 command.Parameters.AddWithValue("@wineID", t.ProductID);
+
                 res = DataBase.ExecuteBasicCommand(command);
                 System.Diagnostics.Debug.WriteLine(string.Format("{0} - User: {1}  Metodo Update Ejecutado Correctamente", DateTime.Now, Session.SessionID));
 

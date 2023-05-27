@@ -154,15 +154,18 @@ namespace ValcotDB.Proveedor
                 case 2: //Moodificar
                     try
                     {
+                        DataRowView dataRow = (DataRowView)dgvDatos.SelectedItem;
+                        byte id = byte.Parse(dataRow.Row.ItemArray[0].ToString());
                         supplier.SupplierName = txtNombreProveedor.Text;
                         supplier.SupplierLastName = txtApellidoProveedor.Text;
                         supplier.SupplierCI = txtCodigoProveedor.Text;
                         supplier.SupplierDirection = txtDireccion.Text;
                         supplier.SupplierCellphone = txtTelefono.Text;
                         supplier.SupplierEmail = txtemail.Text;
-                        supplier.SupplierID = (Byte)Session.SessionID;
+                        supplier.UserID = (Byte)Session.SessionID;
                         implSupplier = new SupplierImpl();
                         int res = implSupplier.Update(supplier);
+
                         if (res > 0)
                         {
                             MessageBox.Show("Registro Modificado con exito!");
@@ -216,6 +219,12 @@ namespace ValcotDB.Proveedor
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             LoadDataGrid();
+        }
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+
+            DisableButtons();
         }
     }
 }

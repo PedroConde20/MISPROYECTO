@@ -23,3 +23,16 @@ E:\ProyectoFinalBDD\KapDB\DAO.Model\bin\Debug\AForge.xml
 E:\ProyectoFinalBDD\KapDB\DAO.Model\bin\Debug\AForge.Video.xml
 E:\ProyectoFinalBDD\KapDB\DAO.Model\bin\Debug\AForge.Video.DirectShow.xml
 E:\ProyectoFinalBDD\KapDB\DAO.Model\obj\Debug\DAO.Model.csproj.CopyComplete
+C:\Users\PCGamer\Desktop\Miss\ManagementInformationSystem\KapDB\DAO.Model\bin\Debug\DAO.Model.dll
+C:\Users\PCGamer\Desktop\Miss\ManagementInformationSystem\KapDB\DAO.Model\bin\Debug\DAO.Model.pdb
+C:\Users\PCGamer\Desktop\Miss\ManagementInformationSystem\KapDB\DAO.Model\bin\Debug\AForge.dll
+C:\Users\PCGamer\Desktop\Miss\ManagementInformationSystem\KapDB\DAO.Model\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\PCGamer\Desktop\Miss\ManagementInformationSystem\KapDB\DAO.Model\bin\Debug\AForge.Video.dll
+C:\Users\PCGamer\Desktop\Miss\ManagementInformationSystem\KapDB\DAO.Model\bin\Debug\AForge.xml
+C:\Users\PCGamer\Desktop\Miss\ManagementInformationSystem\KapDB\DAO.Model\bin\Debug\AForge.Video.xml
+C:\Users\PCGamer\Desktop\Miss\ManagementInformationSystem\KapDB\DAO.Model\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\PCGamer\Desktop\Miss\ManagementInformationSystem\KapDB\DAO.Model\obj\Debug\DAO.Model.csproj.AssemblyReference.cache
+C:\Users\PCGamer\Desktop\Miss\ManagementInformationSystem\KapDB\DAO.Model\obj\Debug\DAO.Model.csproj.CoreCompileInputs.cache
+C:\Users\PCGamer\Desktop\Miss\ManagementInformationSystem\KapDB\DAO.Model\obj\Debug\DAO.Model.csproj.CopyComplete
+C:\Users\PCGamer\Desktop\Miss\ManagementInformationSystem\KapDB\DAO.Model\obj\Debug\DAO.Model.dll
+C:\Users\PCGamer\Desktop\Miss\ManagementInformationSystem\KapDB\DAO.Model\obj\Debug\DAO.Model.pdb

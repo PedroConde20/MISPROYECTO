@@ -1,0 +1,5 @@
+# Ignorar la carpeta .vs dentro de KapDB
+KapDB/.vs/
+
+# Ignorar la carpeta obj dentro de KapDB/ValcotDB
+KapDB/ValcotDB/obj/

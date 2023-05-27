@@ -10,7 +10,7 @@ namespace DAO.Implementation
 {
     public class DataBase
     {
-        static string connectionString = @"Data Source = LAPTOP-COU1EKKM\SQLEXPRESS; Initial Catalog =  DBBKap;  user id = sa; password = Univalle2021";
+        static string connectionString = "Data Source = DESKTOP-EPG9QFN\\SQLEXPRESS; Initial Catalog =  DBBKap;  Integrated Security = True";
 
         public static SqlCommand CreateBasicCommand()
         {

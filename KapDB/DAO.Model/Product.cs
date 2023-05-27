@@ -16,6 +16,8 @@ namespace DAO.Model
         public int Stock { get; set; }
         public string DescriptionProduct { get; set; }
         public byte CategoryID { get; set; }
+
+        public byte SupplierID { get; set; }
         #endregion
 
         #region Constructors
@@ -39,7 +41,7 @@ namespace DAO.Model
        /// <param name="lastUpdate"></param>
        /// <param name="userID"></param>
         //                 0            1              2                3      4                  5                   6          7                  8                     9                  10
-        public Product(byte productID, string productName, double price, int image,int stock, string descriptionWine, byte categoryID ,byte status, DateTime registerDate, DateTime lastUpdate, short userID)
+        public Product(byte productID, string productName, double price, int image,int stock, string descriptionWine, byte categoryID ,byte status, DateTime registerDate, DateTime lastUpdate, short userID, byte supplierID)
             : base(status, registerDate, lastUpdate, userID)
         {
             ProductID = productID;
@@ -49,6 +51,7 @@ namespace DAO.Model
             Stock = stock;
             DescriptionProduct = descriptionWine;
             CategoryID = categoryID;
+            SupplierID = supplierID;
         }
 
        /// <summary>
@@ -61,7 +64,7 @@ namespace DAO.Model
        /// <param name="stock"></param>
        /// <param name="descriptionWine"></param>
        /// <param name="userID"></param>
-        public Product(byte categoryID, string productName, double price, int image, int stock, string descriptionWine, short userID)
+        public Product(byte categoryID, string productName, double price, int image, int stock, string descriptionWine, short userID, byte supplierID)
         {
             CategoryID = categoryID;
             ProductName = productName;
@@ -70,6 +73,7 @@ namespace DAO.Model
             Stock = stock;
             DescriptionProduct = descriptionWine;
             UserID = userID;
+            SupplierID = supplierID;
         }
 
         public Product( string productName, int stock, short userID)

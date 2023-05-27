@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using DAO.Implementation;
 using DAO.Model;
 using KapDB.CambioContraUs;
+using ValcotDB.Proveedor;
 
 namespace KapDB
 {
@@ -186,6 +187,13 @@ namespace KapDB
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void btnProveedores_Click(object sender, RoutedEventArgs e)
+        {
+
+            Proveedor win = new Proveedor();
+            win.ShowDialog();
         }
     }
 }

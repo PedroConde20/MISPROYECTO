@@ -30,7 +30,8 @@ namespace KapDB.Stock
         sbyte optioncrud = -1;
 
         string ruta;
-
+        
+        SupplierImpl implSupplier;
         CategoryImpl implCategory;
         Category category;
         Product product;
@@ -61,6 +62,8 @@ namespace KapDB.Stock
             btnCancelar.IsEnabled = true;
             cbxCategoryProduct.IsEnabled = true;
             cbxCategoryProduct.Focus();
+            cbxProveedorProduct.IsEnabled = true;
+            cbxProveedorProduct.Focus();
             txtNombreProduct.IsEnabled = true;
             txtNombreProduct.Focus();
             txtPrecio.IsEnabled = true;
@@ -70,6 +73,7 @@ namespace KapDB.Stock
             txtDescripcion.IsEnabled = true;
             txtDescripcion.Focus();
             btnAgregarImagen.IsEnabled = true;
+
         }
 
         void DisableButtons()
@@ -81,6 +85,8 @@ namespace KapDB.Stock
             btnSave.IsEnabled = false;
             btnCancelar.IsEnabled = false;
             cbxCategoryProduct.IsEnabled = false;
+
+            cbxProveedorProduct.IsEnabled = false;
             txtNombreProduct.IsEnabled = false;
             txtPrecio.IsEnabled = false;
             txtStock.IsEnabled = false;
@@ -99,6 +105,15 @@ namespace KapDB.Stock
                 cbxCategoryProduct.SelectedValuePath = "categoryID";
                 cbxCategoryProduct.ItemsSource = implCategory.SelectForanea().DefaultView;
                 cbxCategoryProduct.SelectedIndex = 0;
+
+                implSupplier = new SupplierImpl();
+                cbxProveedorProduct.ItemsSource = null;
+                //mostrar elementos
+                cbxProveedorProduct.DisplayMemberPath = "supplierName";
+
+                cbxProveedorProduct.SelectedValuePath = "supplierID";
+                cbxProveedorProduct.ItemsSource = implSupplier.SelectProveedor().DefaultView;
+                cbxProveedorProduct.SelectedIndex = 0;
             }
             catch (Exception)
             {
@@ -146,7 +161,7 @@ namespace KapDB.Stock
                     {
                         int id;
                         int res;
-                        product = new Product(byte.Parse(cbxCategoryProduct.SelectedValue.ToString()),nombreProducto, precio, 1, stock,description,Session.SessionID);
+                        product = new Product(byte.Parse(cbxCategoryProduct.SelectedValue.ToString()),nombreProducto, precio, 1, stock,description,Session.SessionID,byte.Parse(cbxProveedorProduct.SelectedValue.ToString()));
                         id = implProduct.SaveId();
                         res = implProduct.Insert(product);
                         if (res > 0)
@@ -166,15 +181,17 @@ namespace KapDB.Stock
                 case 2: //Moodificar
                     try
                     {
-                        product.CategoryID = byte.Parse(cbxCategoryProduct.SelectedValue.ToString());
-                        product.ProductName = nombreProducto;
-                        product.Price = precio;
-                        product.Stock = stock;
-                        product.DescriptionProduct = description;
-                        product.UserID = (Byte)Session.SessionID;
-                        int id;
                         DataRowView dataRow = (DataRowView)dgvDatos.SelectedItem;
+                        int id;
                         id = Convert.ToInt32(dataRow.Row.ItemArray[0].ToString());
+                        product.CategoryID = byte.Parse(cbxCategoryProduct.SelectedValue.ToString());
+                        product.ProductName = txtNombreProduct.Text;
+                        product.Price =Convert.ToDouble(txtPrecio.Text);
+                        product.Stock = Convert.ToInt32(txtStock.Text);
+                        product.DescriptionProduct = txtDescripcion.Text;
+                        product.UserID = (Byte)Session.SessionID;
+                        product.SupplierID = byte.Parse(cbxProveedorProduct.SelectedValue.ToString());
+
                         implProduct = new ProductImpl();
                         int res = implProduct.Update(product);
                         if (res > 0)
@@ -189,7 +206,10 @@ namespace KapDB.Stock
                             DisableButtons();
                         }
 
+
                     }
+
+
                     catch (Exception)
                     {
 
@@ -271,6 +291,7 @@ namespace KapDB.Stock
                 {
                     DataRowView dataRow = (DataRowView)dgvDatos.SelectedItem;
                     byte id = byte.Parse(dataRow.Row.ItemArray[0].ToString());
+
                     implProduct = new ProductImpl();
                     product = implProduct.Get(id);
                     txtNombreProduct.Text = product.ProductName;
@@ -278,7 +299,8 @@ namespace KapDB.Stock
                     txtPhoto.Text = product.Image.ToString();
                     txtStock.Text = product.Stock.ToString();
                     txtDescripcion.Text =product.DescriptionProduct;
-                    cbxCategoryProduct.Text = product.CategoryID.ToString();
+                    cbxCategoryProduct.SelectedValue = product.CategoryID.ToString();
+                    cbxProveedorProduct.SelectedValue = product.SupplierID.ToString();
                 }
                 catch (Exception)
                 {
@@ -286,6 +308,41 @@ namespace KapDB.Stock
                     MessageBox.Show("No es posible completar la transaccion\nComuniquese con el adm de sistemas");
                 }
             }
+        }
+
+        private void cbxProveedorProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //LoadCategory
+        }
+
+        public void LoadProveedor()
+        {
+            try
+            {
+                implSupplier = new SupplierImpl();
+                cbxProveedorProduct.ItemsSource = null;
+                //mostrar elementos
+                cbxProveedorProduct.DisplayMemberPath = "supplierName";
+
+                cbxProveedorProduct.SelectedValuePath = "supplierID";
+                cbxProveedorProduct.ItemsSource = implSupplier.SelectProveedor().DefaultView;
+                cbxProveedorProduct.SelectedIndex = 0;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void cbxProveedorProduct_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadCategory();
+        }
+
+        private void cbxProveedorProduct_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

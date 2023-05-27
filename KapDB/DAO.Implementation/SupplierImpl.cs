@@ -75,7 +75,8 @@ namespace DAO.Implementation
             DataTable dt = new DataTable();
             System.Diagnostics.Debug.WriteLine(string.Format("{0} - User: {1} Inicializando el Metodo Select de la Tabla Supplier", DateTime.Now, Session.SessionID));
             string query = @"SELECT * FROM Supplier
-                                 ORDER BY 2";
+                                WHERE status = 1
+                                ORDER BY 2 ";
             try
             {
                 SqlCommand command = DataBase.CreateBasicCommand(query);
@@ -171,6 +172,27 @@ namespace DAO.Implementation
                 System.Diagnostics.Debug.WriteLine(string.Format("{0} - User: {1} Error en el metodo Update de la Tabla Supplier - {2} - {3}", DateTime.Now, Session.SessionID, ex.Message, query));
             }
             return res;
+        }
+        public DataTable SelectProveedor()
+        {
+            DataTable dt = new DataTable();
+            System.Diagnostics.Debug.WriteLine(string.Format("{0} - User: {1} Inicializando el Metodo SelectForanea de la Tabla Category", DateTime.Now, Session.SessionID));
+            string query = @"SELECT supplierID, supplierName,supplierLastname
+                                FROM Supplier
+                                WHERE status=1
+                                ORDER BY 2";
+            try
+            {
+                SqlCommand command = DataBase.CreateBasicCommand(query);
+                dt = DataBase.ExecuteDataTableCommand(command);
+                System.Diagnostics.Debug.WriteLine(string.Format("{0} - User: {1}  Metodo SelectForanea Ejecutado Correctamente", DateTime.Now, Session.SessionID));
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(string.Format("{0} - User: {1} Error en el metodo SelectForanea de la Tabla Category - {2} - {3}", DateTime.Now, Session.SessionID, ex.Message, query));
+                throw ex;
+            }
+            return dt;
         }
     }
 }
