@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ValcotDB.Stock;
 
 namespace KapDB.Stock
 {
@@ -38,6 +39,12 @@ namespace KapDB.Stock
             winIngresoVinos win = new winIngresoVinos(1);
             win.ShowDialog();
 
+        }
+
+        private void TextBlock_MouseLeftButtonUp_transacciones(object sender, MouseButtonEventArgs e)
+        {
+            transaccionProductos win = new transaccionProductos();
+            win.ShowDialog();
         }
     }
 }

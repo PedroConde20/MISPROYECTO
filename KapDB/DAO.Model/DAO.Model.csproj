@@ -56,6 +56,7 @@
     <Compile Include="Config.cs" />
     <Compile Include="DataClass.cs" />
     <Compile Include="Image.cs" />
+    <Compile Include="PublicStore.cs" />
     <Compile Include="Sale.cs" />
     <Compile Include="SaleDetail.cs" />
     <Compile Include="Supplier.cs" />

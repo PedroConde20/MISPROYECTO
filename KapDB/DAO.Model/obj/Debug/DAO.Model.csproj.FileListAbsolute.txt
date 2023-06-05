@@ -36,3 +36,16 @@ C:\Users\PCGamer\Desktop\Miss\ManagementInformationSystem\KapDB\DAO.Model\obj\De
 C:\Users\PCGamer\Desktop\Miss\ManagementInformationSystem\KapDB\DAO.Model\obj\Debug\DAO.Model.csproj.CopyComplete
 C:\Users\PCGamer\Desktop\Miss\ManagementInformationSystem\KapDB\DAO.Model\obj\Debug\DAO.Model.dll
 C:\Users\PCGamer\Desktop\Miss\ManagementInformationSystem\KapDB\DAO.Model\obj\Debug\DAO.Model.pdb
+D:\GITHUBREPOS\MISPROYECTO\KapDB\DAO.Model\bin\Debug\DAO.Model.dll
+D:\GITHUBREPOS\MISPROYECTO\KapDB\DAO.Model\bin\Debug\DAO.Model.pdb
+D:\GITHUBREPOS\MISPROYECTO\KapDB\DAO.Model\bin\Debug\AForge.dll
+D:\GITHUBREPOS\MISPROYECTO\KapDB\DAO.Model\bin\Debug\AForge.Video.DirectShow.dll
+D:\GITHUBREPOS\MISPROYECTO\KapDB\DAO.Model\bin\Debug\AForge.Video.dll
+D:\GITHUBREPOS\MISPROYECTO\KapDB\DAO.Model\bin\Debug\AForge.xml
+D:\GITHUBREPOS\MISPROYECTO\KapDB\DAO.Model\bin\Debug\AForge.Video.xml
+D:\GITHUBREPOS\MISPROYECTO\KapDB\DAO.Model\bin\Debug\AForge.Video.DirectShow.xml
+D:\GITHUBREPOS\MISPROYECTO\KapDB\DAO.Model\obj\Debug\DAO.Model.csproj.AssemblyReference.cache
+D:\GITHUBREPOS\MISPROYECTO\KapDB\DAO.Model\obj\Debug\DAO.Model.csproj.CoreCompileInputs.cache
+D:\GITHUBREPOS\MISPROYECTO\KapDB\DAO.Model\obj\Debug\DAO.Model.csproj.CopyComplete
+D:\GITHUBREPOS\MISPROYECTO\KapDB\DAO.Model\obj\Debug\DAO.Model.dll
+D:\GITHUBREPOS\MISPROYECTO\KapDB\DAO.Model\obj\Debug\DAO.Model.pdb
