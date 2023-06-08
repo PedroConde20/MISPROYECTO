@@ -49,3 +49,16 @@ D:\GITHUBREPOS\MISPROYECTO\KapDB\DAO.Model\obj\Debug\DAO.Model.csproj.CoreCompil
 D:\GITHUBREPOS\MISPROYECTO\KapDB\DAO.Model\obj\Debug\DAO.Model.csproj.CopyComplete
 D:\GITHUBREPOS\MISPROYECTO\KapDB\DAO.Model\obj\Debug\DAO.Model.dll
 D:\GITHUBREPOS\MISPROYECTO\KapDB\DAO.Model\obj\Debug\DAO.Model.pdb
+E:\ProyectoFinalBDD\MISPROYECTO\KapDB\DAO.Model\bin\Debug\DAO.Model.dll
+E:\ProyectoFinalBDD\MISPROYECTO\KapDB\DAO.Model\bin\Debug\DAO.Model.pdb
+E:\ProyectoFinalBDD\MISPROYECTO\KapDB\DAO.Model\bin\Debug\AForge.dll
+E:\ProyectoFinalBDD\MISPROYECTO\KapDB\DAO.Model\bin\Debug\AForge.Video.DirectShow.dll
+E:\ProyectoFinalBDD\MISPROYECTO\KapDB\DAO.Model\bin\Debug\AForge.Video.dll
+E:\ProyectoFinalBDD\MISPROYECTO\KapDB\DAO.Model\bin\Debug\AForge.xml
+E:\ProyectoFinalBDD\MISPROYECTO\KapDB\DAO.Model\bin\Debug\AForge.Video.xml
+E:\ProyectoFinalBDD\MISPROYECTO\KapDB\DAO.Model\bin\Debug\AForge.Video.DirectShow.xml
+E:\ProyectoFinalBDD\MISPROYECTO\KapDB\DAO.Model\obj\Debug\DAO.Model.csproj.AssemblyReference.cache
+E:\ProyectoFinalBDD\MISPROYECTO\KapDB\DAO.Model\obj\Debug\DAO.Model.csproj.CoreCompileInputs.cache
+E:\ProyectoFinalBDD\MISPROYECTO\KapDB\DAO.Model\obj\Debug\DAO.Model.csproj.CopyComplete
+E:\ProyectoFinalBDD\MISPROYECTO\KapDB\DAO.Model\obj\Debug\DAO.Model.dll
+E:\ProyectoFinalBDD\MISPROYECTO\KapDB\DAO.Model\obj\Debug\DAO.Model.pdb

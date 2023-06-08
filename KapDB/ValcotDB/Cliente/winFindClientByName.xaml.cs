@@ -23,7 +23,7 @@ namespace KapDB.Cliente
     public partial class winFindClientByName : Window
     {
         Product wine;
-        ProductImpl implWine;
+        ProductStoreImpl implStore;
         public winFindClientByName()
         {
             InitializeComponent();
@@ -55,9 +55,9 @@ namespace KapDB.Cliente
             {
                 try
                 {
-                    implWine = new ProductImpl();
+                    implStore = new ProductStoreImpl();
                     dgvDatos.ItemsSource = null;
-                    dgvDatos.ItemsSource = implWine.SelectLikeByName(txtFind.Text).DefaultView;
+                    dgvDatos.ItemsSource = implStore.SelectLikeByName(txtFind.Text).DefaultView;
                     dgvDatos.Columns[0].Visibility = Visibility.Collapsed;
 
                 }

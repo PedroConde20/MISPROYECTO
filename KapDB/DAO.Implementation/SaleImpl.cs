@@ -26,7 +26,7 @@ namespace DAO.Implementation
             string querySale = @"INSERT INTO Sale (fechaVenta, total , clientID,lastUpdate,UserID)
                             VALUES (@fechaVenta, @total , @clientID,CURRENT_TIMESTAMP,@UserID)";
 
-            string queryDetail = @"INSERT INTO SaleDetail (saleID, productID , quantiy,price)
+            string queryDetail = @"INSERT INTO SaleDetail (saleID, PublicStoreID , quantiy,price)
                                     VALUES  (@saleID, @productID , @quantiy,@price) ";
             try
             {

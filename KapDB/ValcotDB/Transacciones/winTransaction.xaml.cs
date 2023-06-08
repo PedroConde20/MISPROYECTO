@@ -66,14 +66,16 @@ namespace KapDB.Transacciones
                 {
                     totalp += item.Price * item.Quantiy;
 
-                    int productId = item.WineID; int soldQuantity = item.Quantiy; 
-                    ProductImpl productImpl = new ProductImpl(); 
-                    Product product = productImpl.Get(productId); 
-                    int currentStock = product.Stock; 
+                    int productId = item.WineID; 
+                    int soldQuantity = item.Quantiy; 
+
+                    ProductStoreImpl productSImpl = new ProductStoreImpl(); 
+                    PublicStore publicStore = productSImpl.Get(productId); 
+                    int currentStock = publicStore.Stock; 
                     // Restar la cantidad de productos vendidos de la cantidad actual en stock
-                    int newStock = currentStock - soldQuantity; 
+                    int newStock = currentStock - soldQuantity;
                     // Actualizar la cantidad actual en stock del producto en la base de datos
-                    product.Stock = newStock; productImpl.Update(product);
+                    publicStore.Stock = newStock; productSImpl.Update(publicStore);
 
                 }
                 sale = new Sale(totalp,dtpSalePicker.SelectedDate.Value,short.Parse(cbxClient.SelectedValue.ToString()));

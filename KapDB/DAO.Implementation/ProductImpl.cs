@@ -137,10 +137,11 @@ namespace DAO.Implementation
         {
             DataTable dt = new DataTable();
             System.Diagnostics.Debug.WriteLine(string.Format("{0} - User: {1} Inicializando el Metodo SelectLikeByName de la Tabla ProductImpl", DateTime.Now, Session.SessionID));
-            string query = @"SELECT P.productID, CONCAT(P.productName, '-', C.categoryName) AS Producto, P.price
-                                FROM ProductList P
-                                INNER JOIN Category C ON C.categoryID = P.categoryID
-                                WHERE P.status=1 AND (CONCAT(P.productName, '-', C.categoryName) LIKE @txt)";
+            string query = @"SELECT P.PublicStoreID, CONCAT(P.productName, '-', C.categoryName) AS Producto, P.price
+                                FROM PublicStore P
+								INNER JOIN ProductList PL ON PL.productID = P.PublicStoreID
+                                INNER JOIN Category C ON C.categoryID = PL.categoryID
+                                WHERE P.status=1 AND (CONCAT(P.productName, '-', C.categoryName)LIKE @txt );";
             try
             {
                 SqlCommand command = DataBase.CreateBasicCommand(query);

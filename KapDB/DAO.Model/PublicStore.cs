@@ -30,6 +30,19 @@ namespace DAO.Model
             CategoryID = categoryID;
             this.productId = productId;
         }
+        public PublicStore(byte publicStoreID, string productName, double price, int image, int stock, string descriptionWine, byte categoryID, byte status, DateTime registerDate, DateTime lastUpdate, short userID, byte productId)
+            : base(status, registerDate, lastUpdate, userID)
+        {
+            this.publicStoreID = publicStoreID;
+            ProductName = productName;
+            Price = price;
+            Image = image;
+            Stock = stock;
+            DescriptionProduct = descriptionWine;
+            CategoryID = categoryID;
+            this.productId = productId;
+        }
+
         public PublicStore(int stock)
         {
             Stock = stock;
