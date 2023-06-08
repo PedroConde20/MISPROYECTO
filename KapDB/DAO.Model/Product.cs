@@ -25,6 +25,10 @@ namespace DAO.Model
         {
 
         }
+        public Product(int Stock)
+        {
+            this.Stock = Stock;
+        }
 
        /// <summary>
        /// 

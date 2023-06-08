@@ -70,7 +70,7 @@
             <Button x:Name="btnVentas" FontSize="20" Background="{x:Null}" BorderBrush="{x:Null}" Content="Ventas" Click="btnVentas_Click" Margin="809,10,352.4,10" Height="Auto"></Button>
             <Button x:Name="btnUsuarios" FontSize="20" Background="{x:Null}" BorderBrush="{x:Null}" Content="Usuarios" Click="btnUsuarios_Click" Margin="935,10,214.4,10" Height="Auto"></Button>
             <Button x:Name="btnReportes" FontSize="20" Background="{x:Null}" BorderBrush="{x:Null}" Content="Reportes" Click="btnReportes_Click" Margin="1061,10,68.4,10" Height="Auto"></Button>
-            <Button x:Name="btnProducts" FontSize="20" Content="Almacen" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnProducts_Click" Margin="667,10,478.4,10" Height="Auto"/>
+            <Button x:Name="btnProducts" FontSize="20" Content="Almacen" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnProducts_Click" Margin="667,10,478.4,10" Height="Auto" Cursor="Hand"/>
             <Button x:Name="btnClients" FontSize="20" Content="Clientes" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnClients_Click" Margin="528,10,626.4,10" Height="Auto" Cursor="Hand"/>
             <Button x:Name="btnProveedores" FontSize="20" Content="Proveedores" Background="{x:Null}" BorderBrush="{x:Null}"  Margin="356,19,750,19" Height="Auto" Cursor="Hand" Click="btnProveedores_Click"/>
             <Button x:Name="btnInicio" FontSize="20" Content="Inicio" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnInicio_Click" Margin="10,10,1158.4,10" Height="Auto"/>

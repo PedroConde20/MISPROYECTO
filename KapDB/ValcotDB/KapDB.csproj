@@ -140,6 +140,9 @@
     <Compile Include="Reportes\winReports.xaml.cs">
       <DependentUpon>winReports.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Stock\transaccionProductos.xaml.cs">
+      <DependentUpon>transaccionProductos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Stock\uscStock.xaml.cs">
       <DependentUpon>uscStock.xaml</DependentUpon>
     </Compile>
@@ -206,6 +209,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Reportes\winReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Stock\transaccionProductos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

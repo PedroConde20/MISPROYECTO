@@ -17,19 +17,24 @@
     <Grid >
        
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <StackPanel Orientation="Horizontal" Background="Orange">
-                <materialDesign:Card Padding="32" Margin="20" Width="272" Height="150" Background="Orange">
+            <StackPanel Orientation="Horizontal" Background="Orange" Height="136">
+                <materialDesign:Card Padding="32" Margin="20" Width="272" Height="98" Background="Orange">
                     <TextBlock TextAlignment="Center"  FontSize="24" VerticalAlignment="Center" Cursor="Hand" Text="Producto" FontWeight="Bold" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_1" Foreground="#DDFFFFFF"></TextBlock>
 
                 </materialDesign:Card>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Background="#FFDC7114">
-                <materialDesign:Card Padding="32" Margin="20" Width="274" Height="150" Background="#FFDC7114" >
+                <materialDesign:Card Padding="32" Margin="20" Width="272" Height="98" Background="#FFDC7114" >
                     <TextBlock TextAlignment="Center"   FontSize="24" VerticalAlignment="Center" Cursor="Hand" FontWeight="Bold" Foreground="#DDFFFFFF" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp"><Run Text="Categoria"/><Run Text=" "/></TextBlock>
                 </materialDesign:Card>
             </StackPanel>
-            
-           
+            <StackPanel Orientation="Horizontal" Background="#FFDC4B14">
+                <materialDesign:Card Padding="32" Margin="20" Width="272" Height="98" Background="#FFDC4B14" >
+                    <TextBlock TextAlignment="Center"   FontSize="24" VerticalAlignment="Center" Cursor="Hand" FontWeight="Bold" Foreground="#DDFFFFFF" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_transacciones"><Run Text="Tranferir Productos"/><Run Text=" "/></TextBlock>
+                </materialDesign:Card>
+            </StackPanel>
+
+
         </StackPanel>
     </Grid>
 </UserControl>

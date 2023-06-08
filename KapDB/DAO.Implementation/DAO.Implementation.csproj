@@ -56,6 +56,7 @@
     <Compile Include="ConfigImpl.cs" />
     <Compile Include="DataBase.cs" />
     <Compile Include="ImageImpl.cs" />
+    <Compile Include="ProductStoreImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaleImpl.cs" />
     <Compile Include="Session.cs" />
