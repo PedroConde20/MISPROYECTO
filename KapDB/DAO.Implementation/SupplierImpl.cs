@@ -35,6 +35,7 @@ namespace DAO.Implementation
             return res;
         }
 
+
         public Supplier Get(byte id)
         {
             Supplier t = null;
@@ -69,6 +70,22 @@ namespace DAO.Implementation
             }
 
             return t;
+        }
+
+        public DataTable SelectProveedores()
+        {
+            DataTable dt = new DataTable();
+            string query = @"SELECT supplierID, CONCAT(supplierName, ' ' ,supplierLastname) AS 'nombrecompleto' FROM Supplier";
+            try
+            {
+                SqlCommand command = DataBase.CreateBasicCommand(query);
+                dt = DataBase.ExecuteDataTableCommand(command);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return dt;
         }
         public DataTable Selec()
         {
@@ -120,6 +137,27 @@ namespace DAO.Implementation
             }
             return res;
         }
+
+        public DataTable selectOneSupplier(int id)
+        {
+            DataTable dt = new DataTable();
+            string query = @"SELECT productID, productName AS 'Nombre Producto', descriptionProduct AS 'Descripcion', C.categoryName AS 'Categoria'
+                            FROM productList PL
+                            INNER JOIN Category C ON C.categoryID = Pl.categoryID
+                            WHERE PL.supplierID = @supplierID;";
+            try
+            {
+                SqlCommand command = DataBase.CreateBasicCommand(query);
+                command.Parameters.AddWithValue("@supplierID", id);
+                dt = DataBase.ExecuteDataTableCommand(command);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return dt;
+        }
+
         public DataTable SelectLikeByName(string txt)
         {//No usado pero funcional
             DataTable dt = new DataTable();

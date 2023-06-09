@@ -131,6 +131,12 @@
     <Compile Include="Proveedor\Proveedor.xaml.cs">
       <DependentUpon>Proveedor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Proveedor\uscProveedores.xaml.cs">
+      <DependentUpon>uscProveedores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedor\verProveedores.xaml.cs">
+      <DependentUpon>verProveedores.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\winCristalReportCategory.xaml.cs">
       <DependentUpon>winCristalReportCategory.xaml</DependentUpon>
     </Compile>
@@ -197,6 +203,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Proveedor\Proveedor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Proveedor\uscProveedores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Proveedor\verProveedores.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -192,7 +192,7 @@ namespace KapDB
         private void btnProveedores_Click(object sender, RoutedEventArgs e)
         {
 
-            Proveedor win = new Proveedor();
+            uscProveedores win = new uscProveedores();
             win.ShowDialog();
         }
     }

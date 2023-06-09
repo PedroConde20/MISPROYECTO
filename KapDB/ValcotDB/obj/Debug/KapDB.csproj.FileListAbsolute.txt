@@ -428,3 +428,7 @@ E:\ProyectoFinalBDD\MISPROYECTO\KapDB\ValcotDB\obj\Debug\KapDB.csproj.CoreCompil
 E:\ProyectoFinalBDD\MISPROYECTO\KapDB\ValcotDB\obj\Debug\KapDB.csproj.CopyComplete
 E:\ProyectoFinalBDD\MISPROYECTO\KapDB\ValcotDB\obj\Debug\ValcotDB.exe
 E:\ProyectoFinalBDD\MISPROYECTO\KapDB\ValcotDB\obj\Debug\ValcotDB.pdb
+D:\GITHUBREPOS\MISPROYECTO\KapDB\ValcotDB\obj\Debug\Proveedor\uscProveedores.g.cs
+D:\GITHUBREPOS\MISPROYECTO\KapDB\ValcotDB\obj\Debug\Proveedor\uscProveedores.baml
+D:\GITHUBREPOS\MISPROYECTO\KapDB\ValcotDB\obj\Debug\Proveedor\verProveedores.g.cs
+D:\GITHUBREPOS\MISPROYECTO\KapDB\ValcotDB\obj\Debug\Proveedor\verProveedores.baml
