@@ -17,7 +17,7 @@
             WindowState="Normal" WindowStyle="None">
     <Grid Background="#FFFFEBC3">
         <StackPanel Margin="-107,-8,-110,0">
-            <Image Source="/ValcotDB;component/Imagenes/inicioA.png" Height="516" Margin="10,0,392.8,0"/>
+            <Image Source="/ValcotDB;component/Imagenes/inicioA.png" Height="698" Margin="-238,0,255.8,0"/>
         </StackPanel>
         <StackPanel>
             <Grid Background="#FFFFEBC3" Height="80" Margin="323,0,0,0" >
@@ -26,12 +26,16 @@
                 </Button>
                 <TextBlock HorizontalAlignment="Center" FontFamily="Bahnschrift medium" Foreground="#FF2D2D35" VerticalAlignment="Center" FontSize="38" FontWeight="Bold" Margin="61,34,49,-7" Height="53"><Run Text="Inicio de Sesi"/><Run Text="ó"/><Run Text="n"/></TextBlock>
 
+
+
             </Grid>
-            <StackPanel Margin="377,10,41,10" Height="252" Background ="#FFFFEBC3">
+            <StackPanel Margin="377,10,41,10" Height="230" Background ="#FFFFEBC3">
                 <StackPanel Orientation="Horizontal" Margin="10,10,44.4,10" Height="49">
                     <materialDesign:PackIcon Kind="Account" Height="25" Width="25" Foreground="#FFDAA10D" Margin="5,20,5,0"/>
                     <TextBox FontSize="20" x:Name="txtUser" Foreground="#FF2D2D35" FontFamily="Bahnschrift Light" Width="212" materialDesign:HintAssist.Hint="Nombre de Usuario" materialDesign:HintAssist.IsFloating="True"/>
                 </StackPanel>
+
+
 
                 <StackPanel Orientation="Horizontal" Margin="10,10,44,10">
                     <materialDesign:PackIcon Kind="Key" Height="36" Width="25" Foreground="#FFDAA10D" Margin="5"/>
@@ -41,6 +45,8 @@
                     <Button FontSize="20" x:Name="btnLogin" Background="#FFDAA10D" FontFamily="Bahnschrift Light" Content="Ingresar" Width="222" Margin="0 0 10 0" Click="btnLogin_Click"/>
                 </StackPanel>
             </StackPanel>
+
+
 
 
             <materialDesign:DialogHost Visibility="Collapsed" IsOpen="False" x:Name="dhChangePassword">

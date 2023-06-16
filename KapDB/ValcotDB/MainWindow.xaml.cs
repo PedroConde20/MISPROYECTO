@@ -24,11 +24,46 @@ namespace KapDB
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ProductImpl implproduct;
+        private System.Timers.Timer timer;
+        private bool isTimerRunning;
         public MainWindow()
         {
             InitializeComponent();
+            implproduct = new ProductImpl();
+
+
+        }
+        private void StartTimer()
+        {
+            if (!isTimerRunning)
+            {
+                timer.Start();
+                isTimerRunning = true;
+            }
         }
 
+        private void StopTimer()
+        {
+            if (isTimerRunning)
+            {
+                timer.Stop();
+                isTimerRunning = false;
+            }
+        }
+        private void TimerElapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            Dispatcher.Invoke(() =>
+            {
+                ProductImpl implproduct = new ProductImpl();
+                bool allProductsStocked = implproduct.CheckLowStockProducts();
+
+                if (allProductsStocked)
+                {
+                    StopTimer();
+                }
+            });
+        }
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
@@ -116,6 +151,18 @@ namespace KapDB
                    // itemClient.Visibility = Visibility.Collapsed;
                     break;
             }
+            timer = new System.Timers.Timer(1000000);
+            timer.Elapsed += TimerElapsed;
+            timer.AutoReset = true;
+            timer.Enabled = true;
+            // Llamar al método CheckLowStockProducts al inicio
+            ProductImpl implproduct = new ProductImpl();
+            bool allProductsStocked = implproduct.CheckLowStockProducts();
+            if (allProductsStocked)
+            {
+                StopTimer();
+            }
+
         }
 
         private void btnChangePassword_Click(object sender, RoutedEventArgs e)

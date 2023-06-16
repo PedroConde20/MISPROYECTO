@@ -13,18 +13,20 @@
                 <Button x:Name="btnClose" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Click="btnClose_Click" FontWeight="Bold">
                     <materialDesign:PackIcon Kind="Close" Width="25" Height="25" Foreground="White"></materialDesign:PackIcon>
                 </Button>
-                <TextBlock FontFamily="Bahnschrift Light" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" FontSize="30" Foreground="White" FontWeight="Bold" TextDecorations="{x:Null}"><Run Text="Buscar Proveedores"/></TextBlock>
+                <TextBlock FontFamily="Bahnschrift Light" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="44,10,345.2,14" FontSize="30" Foreground="White" FontWeight="Bold" TextDecorations="{x:Null}" Width="454"><Run Text="Mis Proveedores y sus productos"/></TextBlock>
             </Grid>
 
-            <StackPanel Orientation="Horizontal" Margin="10">
-                <Label FontFamily="Bahnschrift Light" Content="Proveedores:" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5"/>
-                <ComboBox FontFamily="Bahnschrift Light"  x:Name="cbxProveedoresList" Width="250" SelectionChanged="cbxProveedoresList_SelectionChanged" />
+
+
+            <StackPanel Orientation="Horizontal" Margin="41,10,44.2,10">
+                <Label FontFamily="Bahnschrift Light" Content="Selecione un Proveedor:" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5"/>
+                <ComboBox FontFamily="Bahnschrift Light"  x:Name="cbxProveedoresList" Width="426" SelectionChanged="cbxProveedoresList_SelectionChanged" />
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,10,9.8,10">
-                <Button x:Name="btnBuscar" Content="Buscar" FontFamily="Bahnschrift Light" Width="110" Margin="5"   Background="#FFDC7114" BorderBrush="#FFDC7114" />
+            <StackPanel Orientation="Horizontal" Margin="41,10,44.2,10">
+                <Button x:Name="btnBuscar" Content="Buscar" FontFamily="Bahnschrift Light" Width="274" Margin="5"   Background="#FFDC7114" BorderBrush="#FFDC7114" />
             </StackPanel>
             <StackPanel>
-                <DataGrid FontFamily="Bahnschrift Light" Background="#FFFFEBC3" x:Name="dgvDatos" Width="auto " Margin="10" Height="300" Loaded="dgvDatos_Loaded" IsReadOnly="True" CanUserAddRows="False" SelectionChanged="dgvDatos_SelectionChanged" />
+                <DataGrid FontFamily="Bahnschrift Light" Background="#FFFFEBC3" x:Name="dgvDatos" Width="auto " Margin="41,10,46.2,10" Height="350" Loaded="dgvDatos_Loaded" IsReadOnly="True" CanUserAddRows="False" SelectionChanged="dgvDatos_SelectionChanged" />
             </StackPanel>
         </StackPanel>
     </Grid>

@@ -129,6 +129,11 @@ namespace KapDB.Stock
                 dgvDatos.ItemsSource = null;
                 dgvDatos.ItemsSource = implProduct.Selec().DefaultView;
                 dgvDatos.Columns[0].Visibility = Visibility.Collapsed;
+                dgvDatos.Columns[3].Visibility = Visibility.Collapsed;
+                dgvDatos.Columns[6].Visibility = Visibility.Collapsed;
+                dgvDatos.Columns[7].Visibility = Visibility.Collapsed;
+                dgvDatos.Columns[8].Visibility = Visibility.Collapsed;
+                dgvDatos.Columns[9].Visibility = Visibility.Collapsed;
             }
             catch (Exception)
             {
@@ -166,7 +171,7 @@ namespace KapDB.Stock
                         res = implProduct.Insert(product);
                         if (res > 0)
                         {
-                            File.Copy(ruta, Config.ProductImage + id + ".jpg");
+                            //File.Copy(ruta, Config.ProductImage + id + ".jpg");
                             MessageBox.Show("Registro Insertado con exito!");
                             LoadDataGrid();
                             DisableButtons();
@@ -198,9 +203,9 @@ namespace KapDB.Stock
                         {
                             //modificar archivo
                             //eliminar archivo existente
-                            File.Delete(Config.ProductImage + id + ".jpg");
+                            //File.Delete(Config.ProductImage + id + ".jpg");
                             //copiar archivo nuevo
-                            File.Copy(ruta, Config.ProductImage + id + ".jpg");
+                            //File.Copy(ruta, Config.ProductImage + id + ".jpg");
                             MessageBox.Show("Registro Actualizado ".ToUpper());
                             LoadDataGrid();
                             DisableButtons();
@@ -244,13 +249,13 @@ namespace KapDB.Stock
         private void btnInsertar_Click(object sender, RoutedEventArgs e)
         {
             EnableButtons();
-            this.optioncrud = 1;
+            this.option = 1;
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
             EnableButtons();
-            this.optioncrud = 2;
+            this.option = 2;
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
@@ -269,7 +274,7 @@ namespace KapDB.Stock
                         int res = implProduct.Delete(product);
                         if (res > 0)
                         {
-                            File.Delete(Config.ProductImage + id +  ".jpg");
+                            //File.Delete(Config.ProductImage + id +  ".jpg");
                             MessageBox.Show(res + "Registro Eliminado ");
                             LoadDataGrid();
                         }
@@ -296,16 +301,17 @@ namespace KapDB.Stock
                     product = implProduct.Get(id);
                     txtNombreProduct.Text = product.ProductName;
                     txtPrecio.Text = product.Price.ToString();
+                    //foto = product.Image.ToString();
                     txtPhoto.Text = product.Image.ToString();
                     txtStock.Text = product.Stock.ToString();
                     txtDescripcion.Text =product.DescriptionProduct;
                     cbxCategoryProduct.SelectedValue = product.CategoryID.ToString();
                     cbxProveedorProduct.SelectedValue = product.SupplierID.ToString();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
 
-                    MessageBox.Show("No es posible completar la transaccion\nComuniquese con el adm de sistemas");
+                    MessageBox.Show("No es posible completar la transaccion\nComuniquese con el adm de sistemas" + ex);
                 }
             }
         }

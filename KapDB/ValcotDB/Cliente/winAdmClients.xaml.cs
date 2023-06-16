@@ -37,6 +37,9 @@ namespace KapDB.Cliente
                 dgvDatos.ItemsSource = null;
                 dgvDatos.ItemsSource = implClient.Selec().DefaultView;
                 dgvDatos.Columns[0].Visibility = Visibility.Collapsed;
+                dgvDatos.Columns[7].Visibility = Visibility.Collapsed;
+                dgvDatos.Columns[8].Visibility = Visibility.Collapsed;
+                dgvDatos.Columns[9].Visibility = Visibility.Collapsed;
             }
             catch (Exception)
             {
@@ -154,6 +157,8 @@ namespace KapDB.Cliente
                 case 2: //Moodificar
                     try
                     {
+                        DataRowView dataRow = (DataRowView)dgvDatos.SelectedItem;
+                        byte id = byte.Parse(dataRow.Row.ItemArray[0].ToString());
                         client.ClientName = txtNombreCliente.Text;
                         client.ClientLastName = txtApellidoCliente.Text;
                         client.ClientCI = txtCiCliente.Text;
@@ -168,6 +173,10 @@ namespace KapDB.Cliente
                             MessageBox.Show("Registro Modificado con exito!");
                             LoadDataGrid();
                             DisableButtons();
+                        }
+                        else
+                        {
+                            MessageBox.Show("no hay datos para insertar");
                         }
 
                     }
@@ -185,6 +194,7 @@ namespace KapDB.Cliente
         {
             EnableButtons();
             this.option = 2;
+            MessageBox.Show("actualizar");
         }
 
         private void dgvDatos_SelectionChanged(object sender, SelectionChangedEventArgs e)

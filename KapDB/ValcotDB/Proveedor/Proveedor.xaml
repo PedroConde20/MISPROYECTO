@@ -6,57 +6,112 @@
         xmlns:local="clr-namespace:ValcotDB.Proveedor"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-     TextElement.FontWeight="Regular"
-     TextElement.FontSize="13"
-     TextOptions.TextFormattingMode="Ideal"
-     TextOptions.TextRenderingMode="Auto"
-     Background="{DynamicResource MaterialDesignPaper}"
-     FontFamily="{DynamicResource MaterialDesignFont}" 
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}" 
         WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" BorderBrush="#FF2E2A25" BorderThickness="2" Loaded="Window_Loaded"
-        Title="Proveedor" Height="572" Width="800">
+        Title="Proveedor" Height="600" Width="1000">
     <Grid>
-        <StackPanel>
-            <Grid Background="#FFE4CB54" Height="60">
-                <Button x:Name="btnClose" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Click="btnClose_Click" FontWeight="Bold">
-                    <materialDesign:PackIcon Kind="Close" Width="25" Height="25" Foreground="Black"></materialDesign:PackIcon>
+        <Grid Background="#FFE4CB54" Margin="0,0,-0.2,532.8">
+            <Button x:Name="btnClose" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Click="btnClose_Click" FontWeight="Bold">
+                <materialDesign:PackIcon Kind="Close" Width="25" Height="25" Foreground="Black"></materialDesign:PackIcon>
+            </Button>
+            <TextBlock FontSize="40" Text="Proveedores" VerticalAlignment="Center" FontFamily="Bahnschrift Light" HorizontalAlignment="Center" Margin="28,10,741.8,1" Foreground="White" FontWeight="ExtraBold" TextDecorations="{x:Null}" />
+        </Grid>
+
+
+
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="609.6"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+
+
+            <StackPanel Orientation="Vertical" Grid.Column="0" Margin="10,71,220.2,107.8">
+                <Label Content="Agregar Proveedor:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="24" FontWeight="Bold" Margin="5,5,4.8,5" Height="48" />
+                <StackPanel Orientation="Horizontal" Margin="0,0,54.8,10">
+                    <Label Content="Nombre del Proveedor:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
+                    <TextBox FontFamily="Bahnschrift Light" x:Name="txtNombreProveedor" Width="235" Margin="5" />
+                </StackPanel>
+
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <Label Content="Apellido del Proveedor:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
+                    <TextBox FontFamily="Bahnschrift Light" x:Name="txtApellidoProveedor" Width="233" Margin="5" Cursor="IBeam" />
+                </StackPanel>
+
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <Label Content="CI/NIT del Proveedor:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
+                    <TextBox FontFamily="Bahnschrift Light" x:Name="txtCodigoProveedor" Width="246" Margin="5" />
+                </StackPanel>
+
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <Label Content="Dirección:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
+                    <TextBox FontFamily="Bahnschrift Light" x:Name="txtDireccion" Width="316" Margin="5" />
+                </StackPanel>
+
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <Label Content="Teléfono:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
+                    <TextBox FontFamily="Bahnschrift Light" x:Name="txtTelefono" Width="222" Margin="5" />
+                </StackPanel>
+
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,-0.2,10" Height="34">
+                    <Label Content="E-Mail:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
+                    <TextBox FontFamily="Bahnschrift Light" x:Name="txtemail" Width="235" Margin="5,5,5,10" />
+                </StackPanel>
+            </StackPanel>
+
+
+
+            <StackPanel Grid.ColumnSpan="2" Margin="442,71,9.8,88.8">
+                <Label Content="Mis Proveedores:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="24" FontWeight="Bold" Margin="5" />
+                <DataGrid Background="#fadc9b" x:Name="dgvDatos" Width="Auto" Height="384" IsReadOnly="True" CanUserAddRows="False" SelectionChanged="dgvDatos_SelectionChanged" Margin="0,0,-0.2,0" />
+            </StackPanel>
+
+
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,517,9.8,9.8" Height="50" Width="511" Grid.ColumnSpan="2">
+                <Button x:Name="btnInsertar" Width="95" Margin="5" Click="btnInsert_Click" Background="#FFDC7114" BorderBrush="#FFDC7114" Cursor="Hand">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Plus" Width="20" Height="20" Margin="0 0 5 0"/>
+                    </StackPanel>
                 </Button>
-                <TextBlock FontSize="40" Text="Proveedores" VerticalAlignment="Center" FontFamily="Bahnschrift Light" HorizontalAlignment="Center" Margin="10" Foreground="White" FontWeight="ExtraBold" TextDecorations="{x:Null}" />
-            </Grid>
-
-            <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Left">
-                <Label Content="Nombre del Proveedor:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
-                <TextBox FontFamily="Bahnschrift Light" x:Name="txtNombreProveedor" Width="200" Margin="5" />
-                <Label Content="Apellido del Proveedor:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
-                <TextBox FontFamily="Bahnschrift Light" x:Name="txtApellidoProveedor" Width="200" Margin="5" Cursor="IBeam" />
+                <Button x:Name="btnUpdate" Width="92" Margin="5" Click="btnUpdate_Click" Background="Orange" BorderBrush="Orange">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Pencil" Width="20" Height="20" Margin="0 0 5 0"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnDelete" Width="92" Margin="5" Click="btnDelete_Click" Background="#FFEE6A4D" BorderBrush="#FFEE6A4D">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Delete" Width="20" Height="20" Margin="0 0 5 0"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnSave" Width="92" Margin="5" IsEnabled="False" Background="#FF027111" BorderBrush="#FF04BD19" Click="btnSave_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="ContentSave" Width="20" Height="20" Margin="0 0 5 0"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnCancelar" Width="92" Margin="5" IsEnabled="False" Click="btnCancelar_Click" Background="#FF04BD19" BorderBrush="#FF04BD19">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Cancel" Width="20" Height="20" Margin="0 0 5 0"/>
+                    </StackPanel>
+                </Button>
             </StackPanel>
-
-            <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Left">
-                <Label Content="CI/NIT del Proveedor:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
-                <TextBox FontFamily="Bahnschrift Light" x:Name="txtCodigoProveedor" Width="100" Margin="5" />
-                <Label Content="Dirección:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
-                <TextBox FontFamily="Bahnschrift Light" x:Name="txtDireccion" Width="200" Margin="5" />
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Left">
-                <Label Content="Teléfono:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
-                <TextBox FontFamily="Bahnschrift Light" x:Name="txtTelefono" Width="100" Margin="5" />
-                <Label Content="E-Mail:" FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5" />
-                <TextBox FontFamily="Bahnschrift Light" x:Name="txtemail" Width="200" Margin="5" />
-            </StackPanel>
-
-            <StackPanel>
-                <DataGrid Background="#fadc9b" x:Name="dgvDatos" Width="auto" Margin="10" Height="250" IsReadOnly="True" CanUserAddRows="False" SelectionChanged="dgvDatos_SelectionChanged" />
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
-                <Button x:Name="btnInsert" Content="Insertar" Width="110" Margin="5" Click="btnInsert_Click" Background="#FFDC7114" BorderBrush="#FFDC7114" />
-                <Button x:Name="btnUpdate" Content="Modificar" Width="110" Margin="5" Click="btnUpdate_Click" Background="Orange" BorderBrush="Orange" />
-                <Button x:Name="btnDelete" Content="Eliminar" Width="110" Margin="5" Click="btnDelete_Click" Background="#FFEE6A4D" BorderBrush="#FFEE6A4D" />
-                <Button x:Name="btnSave" Content="Guardar" Width="110" Margin="5" IsEnabled="False" Background="#FF027111" BorderBrush="#FF04BD19" Click="btnSave_Click" />
-                <Button x:Name="btnCancelar" Content="Cancelar" Width="110" Margin="5" IsEnabled="False" Click="btnCancelar_Click" Background="#FF04BD19" BorderBrush="#FF04BD19" />
-            </StackPanel>
-        </StackPanel>
+        </Grid>
     </Grid>
-
 </Window>

@@ -45,6 +45,9 @@ namespace KapDB.Stock
                 dgvDatos.ItemsSource = null;
                 dgvDatos.ItemsSource= implCategory.Selec().DefaultView;
                 dgvDatos.Columns[0].Visibility = Visibility.Collapsed;
+                dgvDatos.Columns[3].Visibility = Visibility.Collapsed;
+                dgvDatos.Columns[4].Visibility = Visibility.Collapsed;
+                dgvDatos.Columns[5].Visibility = Visibility.Collapsed;
             }
             catch (Exception ex)
             {

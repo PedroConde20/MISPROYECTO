@@ -23,17 +23,19 @@
                 </Button>
             </Grid>
             <materialDesign:ColorZone  Height="54" >
-                <TextBlock  FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" VerticalAlignment="Center" FontSize="38" FontWeight="Bold" Margin="96,0,61,8" HorizontalAlignment="Center" Width="439"><Run Text="Seleccionar "/><Run Text="Producto"/></TextBlock>
+                <TextBlock  FontFamily="Bahnschrift Light" Foreground="#FF2D2D35" VerticalAlignment="Center" FontSize="38" FontWeight="Bold" Margin="98,8,59.8,0.4" HorizontalAlignment="Center" Width="439"><Run Text="Seleccionar "/><Run Text="Producto"/><Run Text="s"/></TextBlock>
             </materialDesign:ColorZone>
 
-            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="10,10,0,10" Width="577">
-                <materialDesign:PackIcon Kind="ShoppingCart" Height="25" Width="25" Margin="5"/>
+
+
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="23,10,0,10" Width="564">
+                <materialDesign:PackIcon Foreground="#FFFFBF1A" Kind="ShoppingCart" Height="47" Width="25" Margin="5"/>
                 <TextBox FontFamily="Bahnschrift Light" Background="White" x:Name="txtFind" Width="212" materialDesign:HintAssist.Hint="Nombre del Producto" materialDesign:HintAssist.IsFloating="True" TextChanged="txtFind_TextChanged" Height="37"/>
-                <Button x:Name="Select" Content="Seleccionar" Width="120" Margin="10" Background="#FF027111" FontFamily="Bahnschrift Light" Click="Select_Click"/>
                 <TextBox FontFamily="Bahnschrift Light" Margin="10" Background="White" x:Name="txtQuantity" Width="92" materialDesign:HintAssist.Hint="Cantidad" materialDesign:HintAssist.IsFloating="True"/>
+                <Button x:Name="Select" Content="Guardar" Width="189" Margin="10" Background="#FF049317" FontFamily="Bahnschrift Light" Click="Select_Click"/>
             </StackPanel>
-            <StackPanel>
-                <DataGrid FontFamily="Bahnschrift Light" Background="#FFDAA10D" x:Name="dgvDatos" Width="auto " Margin="10,10,9.8,10" Height="303" Loaded="dgvDatos_Loaded" IsReadOnly="True" CanUserAddRows="False" />
+            <StackPanel Margin="0,0,9.8,0">
+                <DataGrid FontFamily="Bahnschrift Light" Background="#FFFADC9B" x:Name="dgvDatos" Width="auto " Margin="20,10,9.8,10" Height="303" Loaded="dgvDatos_Loaded" IsReadOnly="True" CanUserAddRows="False" />
             </StackPanel>
         </StackPanel>
     </Grid>

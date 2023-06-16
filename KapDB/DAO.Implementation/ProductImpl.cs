@@ -7,7 +7,7 @@ using DAO.Model;
 using DAO.interfaces;
 using System.Data;
 using System.Data.SqlClient;
-
+using System.Windows.Forms;
 
 namespace DAO.Implementation
 {
@@ -132,7 +132,48 @@ namespace DAO.Implementation
             }
             return dt;
         }
+        public bool CheckLowStockProducts()
+        {
+            DataTable dt = new DataTable();
+            string query = @"SELECT P.productName, P.stock
+                     FROM ProductList P
+                     INNER JOIN Category C ON C.categoryID = P.categoryID
+                     WHERE C.categoryName = 'Lacteos' AND P.stock < 20";
 
+            try
+            {
+                SqlCommand command = DataBase.CreateBasicCommand(query);
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                dataAdapter.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    StringBuilder message = new StringBuilder();
+                    message.AppendLine("¡Atención! Algunos productos tienen un stock bajo:\n");
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        string productName = row["productName"].ToString();
+                        int stock = Convert.ToInt32(row["stock"]);
+
+                        message.AppendLine($"Producto: {productName}");
+                        message.AppendLine($"Stock actual: {stock}");
+                        message.AppendLine("------------------------");
+                    }
+
+                    string finalMessage = message.ToString().TrimEnd('-', '\n');
+                    MessageBox.Show(finalMessage, "Stock Bajo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            // Verificar si todos los productos tienen un stock mayor a 20
+            bool allProductsStocked = dt.Rows.Cast<DataRow>().All(row => Convert.ToInt32(row["stock"]) >= 20);
+            return allProductsStocked;
+        }
         public DataTable SelectLikeByName(string txt)
         {
             DataTable dt = new DataTable();

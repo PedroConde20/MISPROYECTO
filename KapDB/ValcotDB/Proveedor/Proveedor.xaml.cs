@@ -37,6 +37,10 @@ namespace ValcotDB.Proveedor
                 dgvDatos.ItemsSource = null;
                 dgvDatos.ItemsSource = implSupplier.Selec().DefaultView;
                 dgvDatos.Columns[0].Visibility = Visibility.Collapsed;
+                dgvDatos.Columns[7].Visibility = Visibility.Collapsed;
+                dgvDatos.Columns[8].Visibility = Visibility.Collapsed;
+                dgvDatos.Columns[9].Visibility = Visibility.Collapsed;
+                dgvDatos.Columns[10].Visibility = Visibility.Collapsed;
             }
             catch (Exception)
             {
@@ -47,7 +51,7 @@ namespace ValcotDB.Proveedor
 
         void EnableButtons()
         {
-            btnInsert.IsEnabled = false;
+            btnInsertar.IsEnabled = false;
             btnUpdate.IsEnabled = false;
             btnDelete.IsEnabled = false;
 
@@ -70,7 +74,7 @@ namespace ValcotDB.Proveedor
 
         void DisableButtons()
         {
-            btnInsert.IsEnabled = true;
+            btnInsertar.IsEnabled = true;
             btnUpdate.IsEnabled = true;
             btnDelete.IsEnabled = true;
 

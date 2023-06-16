@@ -5,44 +5,89 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KapDB.Stock"
         mc:Ignorable="d"
-         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-     TextElement.FontWeight="Regular"
-     TextElement.FontSize="13"
-     TextOptions.TextFormattingMode="Ideal"
-     TextOptions.TextRenderingMode="Auto"
-     Background="{DynamicResource MaterialDesignPaper}"
-     FontFamily="{DynamicResource MaterialDesignFont}" 
-     WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" BorderBrush="#FF2E2A25" BorderThickness="2" Loaded="Window_Loaded"
-     Title="winAdmTiposdeProductos" Height="550" Width="900">
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        BorderBrush="#FF2E2A25"
+        BorderThickness="2"
+        Loaded="Window_Loaded"
+        Title="winAdmTiposdeProductos"
+        Height="550"
+        Width="900">
+
+
+
     <Grid>
         <StackPanel>
-            <Grid Background="#FF2D2D35"  Height="60" >
+            <Grid Background="#FF2D2D35" Height="60">
                 <Button x:Name="btnClose" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Click="btnClose_Click" FontWeight="Bold">
                     <materialDesign:PackIcon Kind="Close" Width="25" Height="25" Foreground="White"></materialDesign:PackIcon>
                 </Button>
-                <TextBlock FontFamily="Bahnschrift Light" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" FontSize="30" Foreground="White" FontWeight="Bold" TextDecorations="{x:Null}"><Run Text=" Administrar "/><Run Text="Categorías"/></TextBlock>
+                <TextBlock FontFamily="Bahnschrift Light" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" FontSize="30" Foreground="White" FontWeight="Bold" TextDecorations="{x:Null}">
+<Run Text=" Administrar " />
+<Run Text="Categorías" />
+                </TextBlock>
             </Grid>
 
-            <StackPanel Orientation="Horizontal" Margin="10">
+
+
+            <StackPanel Orientation="Horizontal" Margin="10,10,123.8,10">
                 <Label FontFamily="Bahnschrift Light" Content="Ingrese nombre de categoría:" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5"/>
                 <TextBox FontFamily="Bahnschrift Light"  x:Name="txtCategoryWine" Width="250" IsEnabled="False"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="10">
+            <StackPanel Orientation="Horizontal" Margin="10,10,123.8,10">
                 <Label FontFamily="Bahnschrift Light" Content="Descripción de la categoría:" Foreground="#FF2D2D35" FontSize="14" FontWeight="Bold" Margin="5"/>
                 <TextBox FontFamily="Bahnschrift Light"  x:Name="txtDescriptionWine" Width="400" IsEnabled="False"/>
             </StackPanel>
 
+
+
             <StackPanel>
                 <DataGrid FontFamily="Bahnschrift Light" Background="#FFFFEBC3" x:Name="dgvDatos" Width="auto " Margin="10" Height="300" Loaded="dgvDatos_Loaded" IsReadOnly="True" CanUserAddRows="False" SelectionChanged="dgvDatos_SelectionChanged" />
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="290,10,9.8,10">
-                <Button x:Name="btnInsert" Content="Intertar" FontFamily="Bahnschrift Light" Width="110" Margin="5" Click="btnInsert_Click"  Background="#FFDC7114" BorderBrush="#FFDC7114"/>
-                <Button x:Name="btnUpdate" Content="Modificar" FontFamily="Bahnschrift Light" Width="110" Margin="5" Click="btnUpdate_Click" Background="Orange" BorderBrush="Orange"/>
-                <Button x:Name="btnDelete" Content="Eliminar" FontFamily="Bahnschrift Light" Width="110" Margin="5" Click="btnDelete_Click"  Background="#FFEE6A4D" BorderBrush="#FFEE6A4D"/>
-                <Button x:Name="btnSave" Content="Guardar" FontFamily="Bahnschrift Light" Width="110" Margin="5" IsEnabled="False" Background="#FF027111" BorderBrush="#FF04BD19" Click="btnSave_Click"/>
-                <Button x:Name="btnCancerlar" FontFamily="Bahnschrift Light" Content="Cancelar" Width="110" Margin="5" IsEnabled="False" Click="btnCancerlar_Click" Background="#FF027111" BorderBrush="#FF04BD19"/>
-            </StackPanel>
+        </StackPanel>
+
+
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,493,9.8,10.2">
+            <Button x:Name="btnInsert" Width="90" Margin="5" Click="btnInsert_Click" Background="#FFDC7114" BorderBrush="#FFDC7114">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Plus" Width="25" Height="25" Margin="0 0 5 0"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnUpdate" Width="90" Margin="5" Click="btnUpdate_Click" Background="Orange" BorderBrush="Orange">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Pencil" Width="20" Height="20" Margin="0 0 5 0"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnDelete" Width="90" Margin="5" Click="btnDelete_Click" Background="#FFEE6A4D" BorderBrush="#FFEE6A4D">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Delete" Width="20" Height="20" Margin="0 0 5 0"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+
+
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,72,9.8,0" Height="89">
+            <Button x:Name="btnSave" Width="90" Margin="5" IsEnabled="False" Background="#FF027111" BorderBrush="#FF04BD19" Click="btnSave_Click">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="ContentSave" Width="20" Height="20" Margin="0 0 5 0"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnCancerlar" Width="90" Margin="5" IsEnabled="False" Click="btnCancerlar_Click" Background="#FF04BD19" BorderBrush="#FF04BD19">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Cancel" Width="20" Height="20" Margin="0 0 5 0"/>
+                </StackPanel>
+            </Button>
         </StackPanel>
     </Grid>
 </Window>

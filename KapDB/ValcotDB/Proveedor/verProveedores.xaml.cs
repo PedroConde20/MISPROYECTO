@@ -73,7 +73,7 @@ namespace ValcotDB.Proveedor
 
         private void dgvDatos_Loaded(object sender, RoutedEventArgs e)
         {
-
+            dgvDatos.Columns[0].Visibility = Visibility.Collapsed;
         }
 
         private void dgvDatos_SelectionChanged(object sender, SelectionChangedEventArgs e)

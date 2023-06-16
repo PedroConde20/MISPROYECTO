@@ -53,6 +53,8 @@ namespace KapDB.Usuarios
                 dgvDatos.ItemsSource = null;
                 dgvDatos.ItemsSource = implUser.Selec().DefaultView;
                 dgvDatos.Columns[0].Visibility = Visibility.Collapsed;
+                dgvDatos.Columns[3].Visibility = Visibility.Collapsed;
+                dgvDatos.Columns[4].Visibility = Visibility.Collapsed;
             }
             catch (Exception ex)
             {

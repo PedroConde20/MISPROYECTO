@@ -14,9 +14,13 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}" 
         WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" BorderBrush="#FF2E2A25" BorderThickness="2" Loaded="Window_Loaded"
-        Title="winIngresoVinos" Height="500" Width="800">
+        Title="winIngresoVinos" Height="523.2" Width="866.4">
     <Grid>
-        <StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="493*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="0,0,-0.2,-14.2" Grid.RowSpan="2">
             <Grid Background="#FF2D2D35" Height="60">
                 <Button x:Name="btnClose" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Click="btnClose_Click" FontWeight="Bold">
                     <materialDesign:PackIcon Kind="Close" Width="25" Height="25" Foreground="Black"></materialDesign:PackIcon>
@@ -33,6 +37,8 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
+
+
 
                 <StackPanel Grid.RowSpan="3">
                     <Grid>
@@ -51,19 +57,29 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
 
+
+
                         <Label Content="Seleccione una categoría:" Foreground="Black" FontWeight="Bold" />
-                        <ComboBox x:Name="cbxCategoryProduct" IsEnabled="False" Grid.Column="1" Loaded="cbxCategoryProduct_Loaded"></ComboBox>
+                        <ComboBox x:Name="cbxCategoryProduct" IsEnabled="False" Loaded="cbxCategoryProduct_Loaded" Grid.ColumnSpan="2" Margin="211,0,19.6,24.6" Grid.RowSpan="2"/>
                         <Label Grid.Row="1" Content="Nombre del producto:" Foreground="Black" FontWeight="Bold" />
-                        <TextBox IsEnabled="False" Grid.Row="1" x:Name="txtNombreProduct" Grid.Column="1"></TextBox>
+                        <TextBox IsEnabled="False" Grid.Row="1" x:Name="txtNombreProduct" Grid.ColumnSpan="2" Margin="211,0.2,19.6,0"/>
+
+
 
                         <Label Grid.Row="2" Content="Precio Unitario(Bs):" Foreground="Black" FontWeight="Bold" />
-                        <TextBox IsEnabled="False" Grid.Row="2" x:Name="txtPrecio" Grid.Column="1"></TextBox>
+                        <TextBox IsEnabled="False" Grid.Row="2" x:Name="txtPrecio" Grid.ColumnSpan="2" Margin="211,0,19.6,0.8"/>
+
+
 
                         <Label Grid.Row="3" Content="Stock:" Foreground="Black" FontWeight="Bold" />
                         <TextBox IsEnabled="False" Grid.Row="3" x:Name="txtStock" Grid.Column="1"></TextBox>
 
+
+
                         <Label Grid.Row="4" Content="Descripción del producto:" Foreground="Black" FontWeight="Bold" />
                         <TextBox IsEnabled="False" Grid.ColumnSpan="2" Grid.Row="5" x:Name="txtDescripcion" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"></TextBox>
+
+
 
                         <Label Content="Seleccione un proveedor:" Grid.Row="6" Foreground="Black" FontWeight="Bold" />
                         <ComboBox x:Name="cbxProveedorProduct" Grid.Row="5" IsEnabled="False" Grid.Column="1" Loaded="cbxProveedorProduct_Loaded" Grid.RowSpan="2" VerticalAlignment="Top" Margin="0,42,0,0" SelectionChanged="cbxProveedorProduct_SelectionChanged_1"></ComboBox>
@@ -71,23 +87,44 @@
                     <StackPanel Margin="10">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Width="358">
                             <TextBox IsEnabled="False" Margin="0 0 20 0" x:Name="txtPhoto" Width="116" />
-                            <Label Margin="0 0 20 0" Content="Imagen del producto:" Foreground="Black" FontWeight="Bold" />
-                            <Button IsEnabled="False" Content=". . ." Width="30" Margin="20 0 0 0 " x:Name="btnAgregarImagen" Click="btnAgregarImagen_Click" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Background="#FF2E2A25" BorderBrush="#FF2E2A25" Padding="0" Foreground="White" FontWeight="Bold"/>
+                            <Label VerticalContentAlignment="Center" Margin="0 0 20 0" Content="Agregar Imagen:" Foreground="Black" Width="105"  />
+                            <Button IsEnabled="False" Width="76" Margin="20 0 0 0" x:Name="btnAgregarImagen" Click="btnAgregarImagen_Click" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Background="#FF2E2A25" BorderBrush="#FF2E2A25" Padding="0" FontWeight="Bold">
+                                <materialDesign:PackIcon Kind="ImageSearch" Foreground="White" Width="24" Height="24"/>
+                            </Button>
                         </StackPanel>
-
                         <Image x:Name="imgFoto" Margin="10" Height="120"></Image>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Background="#FF2D2D35" Grid.Column="1" Grid.RowSpan="3" Margin="0.2,0,-0.2,18">
-                    <DataGrid x:Name="dgvDatos" Width="auto " Margin="10" Height="317" IsReadOnly="True" CanUserAddRows="False" SelectionChanged="dgvDatos_SelectionChanged" />
+                    <DataGrid x:Name="dgvDatos" Width="auto " Margin="10,10,9.6,10" Height="340" IsReadOnly="True" CanUserAddRows="False" SelectionChanged="dgvDatos_SelectionChanged" />
                 </StackPanel>
             </Grid>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="559">
-                <Button x:Name="btnSave" Margin="10" Content="Guardar" Click="btnSave_Click" Width="93" Background="#FF027111"/>
-                <Button x:Name="btnCancelar" Margin="10" Content="Cancelar" Width="101" Background="#FF027111" Click="btnCancelar_Click"/>
-                <Button x:Name="btnInsertar" Margin="10" Content="Insertar" Width="96" Click="btnInsertar_Click" Background="#FFDC7114" BorderBrush="#FFDC7114"/>
-                <Button x:Name="btnUpdate" Margin="10" Content="Modificar" Click="btnUpdate_Click" Background="Orange" BorderBrush="Orange" Width="93"/>
-                <Button x:Name="btnDelete" Content="Eliminar" Click="btnDelete_Click" Background="#FFEE6A4D" BorderBrush="#FFEE6A4D" Width="92"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0.2,10" Height="50" Width="501">
+                <Button x:Name="btnInsertar" Width="90" Margin="5" Click="btnInsertar_Click" Background="#FFDC7114" BorderBrush="#FFDC7114">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Plus" Width="20" Height="20" Margin="0 0 5 0"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnUpdate" Width="90" Margin="5" Click="btnUpdate_Click" Background="Orange" BorderBrush="Orange">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Pencil" Width="20" Height="20" Margin="0 0 5 0"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnDelete" Width="90" Margin="5" Click="btnDelete_Click" Background="#FFEE6A4D" BorderBrush="#FFEE6A4D">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Delete" Width="20" Height="20" Margin="0 0 5 0"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnSave" Width="90" Margin="5" IsEnabled="False" Background="#FF027111" BorderBrush="#FF04BD19" Click="btnSave_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="ContentSave" Width="20" Height="20" Margin="0 0 5 0"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnCancelar" Width="90" Margin="5" IsEnabled="False" Click="btnCancelar_Click" Background="#FF04BD19" BorderBrush="#FF04BD19">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Cancel" Width="20" Height="20" Margin="0 0 5 0"/>
+                    </StackPanel>
+                </Button>
             </StackPanel>
         </StackPanel>
     </Grid>

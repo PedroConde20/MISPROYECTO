@@ -15,58 +15,71 @@
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}" 
         WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" BorderBrush="#FF2E2A25" BorderThickness="2" Loaded="Window_Loaded" Activated="Window_Activated"
-        Title="winTransaction" Height="534.448" Width="1165.295">
+        Title="winTransaction" Height="600" Width="1165.295">
     <Grid Background="White" >
         <StackPanel>
             <Grid Background="#FF2D2D35" Height="60" >
 
 
+
+
                 <Button x:Name="btnClose" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Click="btnClose_Click" FontWeight="Bold">
                     <materialDesign:PackIcon Kind="Close" Width="25" Height="25" Foreground="White"></materialDesign:PackIcon>
                 </Button>
-                <TextBlock x:Name="txtTitle" FontFamily="Bahnschrift Light"  Foreground="White" Text="Detalles de la Compra" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" FontSize="30"  FontWeight="Bold" TextDecorations="{x:Null}" />
+                <TextBlock x:Name="txtTitle" FontFamily="Bahnschrift Light"  Foreground="White" Text="Detalles de la Venta" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="30,12,448.4,12" FontSize="30"  FontWeight="Bold" TextDecorations="{x:Null}" Width="684" />
             </Grid>
+
+
 
             <Grid Margin="10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="444*"/>
                     <ColumnDefinition Width="733*"/>
                 </Grid.ColumnDefinitions>
-                <Grid Margin="0,0,9,109.8">
+                <Grid Margin="10,0,22.2,224.8">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition/>
+                        <RowDefinition Height="50*"/>
 
 
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
+
+
+                        <RowDefinition Height="50*"/>
+                        <RowDefinition Height="58*"/>
+                        <RowDefinition Height="17*"/>
+                        <RowDefinition Height="33*"/>
                     </Grid.RowDefinitions>
 
 
 
-                    <Label Margin="5,11,5,10" Content="Selecione el cliente:" Foreground="Black" FontWeight="Bold" FontFamily="Bahnschrift Light"/>
-                    <ComboBox Background="White" Margin="5" x:Name="cbxClient" FontFamily="Bahnschrift Light" Grid.Column="1" Loaded="cbxClient_Loaded"></ComboBox>
+                    <Label Margin="5,11,5.2,10.4" Content="Selecione el cliente:" Foreground="Black" FontWeight="Bold" FontFamily="Bahnschrift Light"/>
+                    <ComboBox Background="White" Margin="4.8,13,5.4,12.4" x:Name="cbxClient" FontFamily="Bahnschrift Light" Grid.Column="1" Loaded="cbxClient_Loaded"></ComboBox>
 
-                    <Label Height="20" Margin="5" Grid.Row="1" Content="Fecha de Venta:"  Foreground="Black" FontWeight="Bold" FontFamily="Bahnschrift Light"/>
-                    <DatePicker Height="30" Margin="5" FontFamily="Bahnschrift Light" Grid.Row="1" x:Name="dtpSalePicker" Grid.Column="1"></DatePicker>
+
+
+                    <Label Height="20" Margin="5,15.6,5.2,14.8" Grid.Row="1" Content="Fecha de Venta:"  Foreground="Black" FontWeight="Bold" FontFamily="Bahnschrift Light"/>
+                    <DatePicker Height="30" Margin="4.8,10.6,5.4,9.8" FontFamily="Bahnschrift Light" Grid.Row="1" x:Name="dtpSalePicker" Grid.Column="1"></DatePicker>
                     <Button Grid.Row="2"  x:Name="btnSave" Content="Vender" Margin="10,15.2,79.2,10.4" FontFamily="Bahnschrift Light"  Background="#2196f3" BorderBrush="#137fd9" Click="btnSave_Click"/>
-                    <Button HorizontalAlignment="Center" Grid.Column="1"  Grid.Row="2" x:Name="btnCancerlar" Content="Cancelar" FontFamily="Bahnschrift Light" Width="130" Margin="46.8,15.2,34.4,10.4" Click="btnCancerlar_Click" Background="#FFDC7114" BorderBrush="#FFDAA10D"/>
+                    <Button HorizontalAlignment="Center" Grid.Column="1"  Grid.Row="2" x:Name="btnCancerlar" Content="Cancelar" FontFamily="Bahnschrift Light" Width="130" Margin="46.8,15.2,34.4,10.4" Click="btnCancerlar_Click" Background="#FFE44E4E" BorderBrush="#FFDAA10D"/>
+
+
 
                 </Grid>
                 <StackPanel Margin="3,0,-0.2,-114.2" Grid.Column="1">
-                    <Viewer:CrystalReportsViewer x:Name="viewerReceiptTwo" Height="433" Margin="10,0,0,0"/>
+                    <Viewer:CrystalReportsViewer x:Name="viewerReceiptTwo" Height="511" Margin="10,0,0,0"/>
                 </StackPanel>
-                <DataGrid Background="#FFDAA10D" FontFamily="Bahnschrift Light" x:Name="dgvDatos" Width="auto " Margin="10,177,710.4,-114.6" AutoGenerateColumns="False" Loaded="dgvDatos_Loaded" IsReadOnly="True" CanUserAddRows="False" SelectionChanged="dgvDatos_SelectionChanged" ItemsSource="{Binding productList}" Grid.ColumnSpan="2" >
+                <DataGrid Background="#FFFFBD11" FontFamily="Bahnschrift Light" x:Name="dgvDatos" Width="auto " Margin="10,177,9.2,-114.2" AutoGenerateColumns="False" Loaded="dgvDatos_Loaded" IsReadOnly="True" CanUserAddRows="False" SelectionChanged="dgvDatos_SelectionChanged" ItemsSource="{Binding productList}" >
                     <DataGrid.Columns>
                         <DataGridTextColumn x:Name="dgcProduct" Header="ID" Visibility="Collapsed"  Binding="{Binding WineID}"/>
                         <DataGridTextColumn x:Name="dgcQuantity" Header="Cantidad" Binding="{Binding Quantiy}"/>
                         <DataGridTextColumn x:Name="dgcProductName" Header="Producto" Width="150" Binding="{Binding ProductDescription}"/>
                         <DataGridTextColumn x:Name="dgcUnitPrice" Header="Precio Unitario" Binding="{Binding Price}"/>
                     </DataGrid.Columns>
+
+
 
                     <DataGrid.ContextMenu>
                         <ContextMenu>

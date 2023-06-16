@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\GITHUBREPOS\MISPROYECTO\KapDB\ValcotDB\obj\Debug\
+C:\Users\PCGamer\Desktop\MisRepo\MISPROYECTO\KapDB\ValcotDB\obj\Debug\
 ValcotDB
 none
 false
 DEBUG;TRACE
-D:\GITHUBREPOS\MISPROYECTO\KapDB\ValcotDB\App.xaml
+C:\Users\PCGamer\Desktop\MisRepo\MISPROYECTO\KapDB\ValcotDB\App.xaml
 202043181144
 
 302016703418
-27997903208
+271669026156
 AcercaDe\uscAcercaDe.xaml;CambioContraUs\winCambiodeContra.xaml;Cliente\winAdmClients.xaml;Cliente\winFindClientByName.xaml;MainWindow.xaml;OlvidoPassword\winOlvidoPassword.xaml;Proveedor\Proveedor.xaml;Proveedor\uscProveedores.xaml;Proveedor\verProveedores.xaml;Reportes\winCristalReportCategory.xaml;Reportes\winCristarlReportOne.xaml;Reportes\winReports.xaml;Stock\transaccionProductos.xaml;Stock\uscStock.xaml;Stock\winAdmProductosCategoria.xaml;Stock\winIngresoProductos.xaml;Transacciones\winReceipt.xaml;Transacciones\winTransaction.xaml;Users\winLogin.xaml;Usuarios\Usuarios.xaml;
 
 False

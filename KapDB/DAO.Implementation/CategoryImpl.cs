@@ -114,6 +114,27 @@ namespace DAO.Implementation
             }
             return dt;
         }
+
+
+        public DataTable Selec2()
+        {
+            DataTable dt = new DataTable();
+            System.Diagnostics.Debug.WriteLine(string.Format("{0} - User: {1} Inicializando el Metodo Select de la Tabla Category", DateTime.Now, Session.SessionID));
+            string query = @"SELECT * FROM vwCategory
+                                  ORDER BY 2";
+            try
+            {
+                SqlCommand command = DataBase.CreateBasicCommand(query);
+                dt = DataBase.ExecuteDataTableCommand(command);
+                System.Diagnostics.Debug.WriteLine(string.Format("{0} - User: {1}  Metodo Select Ejecutado Correctamente", DateTime.Now, Session.SessionID));
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(string.Format("{0} - User: {1} Error en el metodo Select de la Tabla Category - {2} - {3}", DateTime.Now, Session.SessionID, ex.Message, query));
+                throw ex;
+            }
+            return dt;
+        }
         public DataTable SelectForanea()
         {
             DataTable dt = new DataTable();

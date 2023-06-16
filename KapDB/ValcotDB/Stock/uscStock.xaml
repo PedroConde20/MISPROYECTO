@@ -7,34 +7,45 @@
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-     TextElement.FontWeight="Regular"
-     TextElement.FontSize="13"
-     TextOptions.TextFormattingMode="Ideal"
-     TextOptions.TextRenderingMode="Auto"
-     Background="{DynamicResource MaterialDesignPaper}"
-     FontFamily="{DynamicResource MaterialDesignFont}" >
-    <Grid >
-       
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <StackPanel Orientation="Horizontal" Background="Orange" Height="136">
-                <materialDesign:Card Padding="32" Margin="20" Width="272" Height="98" Background="Orange">
-                    <TextBlock TextAlignment="Center"  FontSize="24" VerticalAlignment="Center" Cursor="Hand" Text="Producto" FontWeight="Bold" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_1" Foreground="#DDFFFFFF"></TextBlock>
-
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             TextElement.FontWeight="Regular"
+             TextElement.FontSize="13"
+             TextOptions.TextFormattingMode="Ideal"
+             TextOptions.TextRenderingMode="Auto"
+             Background="{DynamicResource MaterialDesignPaper}"
+             FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="220,19,179,19.6" Width="401">
+            <StackPanel Orientation="Horizontal" Background="#FFFFD589" Height="136" >
+                <materialDesign:Card Padding="32" Margin="20,20,20,18" Width="360" Height="98" Background="Orange">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Cursor="Hand" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_1">
+                        <materialDesign:PackIcon Foreground="White" Kind="PackageVariant" Width="32" Height="32" Margin="0 0 8 0"/>
+                        <TextBlock TextAlignment="Center" FontSize="24" VerticalAlignment="Center" Text="Productos" FontWeight="Bold" Foreground="#DDFFFFFF" Width="255"/>
+                    </StackPanel>
                 </materialDesign:Card>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Background="#FFDC7114">
-                <materialDesign:Card Padding="32" Margin="20" Width="272" Height="98" Background="#FFDC7114" >
-                    <TextBlock TextAlignment="Center"   FontSize="24" VerticalAlignment="Center" Cursor="Hand" FontWeight="Bold" Foreground="#DDFFFFFF" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp"><Run Text="Categoria"/><Run Text=" "/></TextBlock>
+            <StackPanel Orientation="Horizontal" Background="#FFFFBE86">
+                <materialDesign:Card Padding="32" Margin="20" Width="359" Height="98" Background="#FFDC7114">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Cursor="Hand" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp">
+                        <materialDesign:PackIcon Foreground="White" Kind="ViewList" Width="32" Height="32" Margin="0 0 8 0"/>
+                        <TextBlock TextAlignment="Center" FontSize="24" VerticalAlignment="Center" FontWeight="Bold" Foreground="#DDFFFFFF" Width="255">
+<Run Text="Categoría"/>
+<Run Text=" "/>
+                        </TextBlock>
+                    </StackPanel>
                 </materialDesign:Card>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Background="#FFDC4B14">
-                <materialDesign:Card Padding="32" Margin="20" Width="272" Height="98" Background="#FFDC4B14" >
-                    <TextBlock TextAlignment="Center"   FontSize="24" VerticalAlignment="Center" Cursor="Hand" FontWeight="Bold" Foreground="#DDFFFFFF" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_transacciones"><Run Text="Tranferir Productos"/><Run Text=" "/></TextBlock>
+            <StackPanel Orientation="Horizontal" Background="#FFFFCDBA">
+                <materialDesign:Card Padding="32" Margin="20" Width="363" Height="98" Background="#FFDC4B14" >
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Cursor="Hand" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_transacciones">
+                        <materialDesign:PackIcon Foreground="White" Kind="Transfer" Width="32" Height="32" Margin="0 0 8 0"/>
+                        <TextBlock TextAlignment="Center" FontSize="24" VerticalAlignment="Center" FontWeight="Bold" Foreground="#DDFFFFFF" Width="259">
+<Run Text="Transferir"/>
+<Run Text=" "/>
+                        </TextBlock>
+                    </StackPanel>
                 </materialDesign:Card>
             </StackPanel>
-
-
         </StackPanel>
     </Grid>
 </UserControl>

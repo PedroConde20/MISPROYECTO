@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:ValcotDB.Proveedor"
         mc:Ignorable="d"
         d:DesignHeight="450" d:DesignWidth="800"
+        WindowStartupLocation="CenterScreen"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
      TextElement.FontWeight="Regular"
@@ -15,17 +16,24 @@
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}" >
     <Grid >
-
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <StackPanel Orientation="Horizontal" Background="Orange" Height="136">
-                <materialDesign:Card Padding="32" Margin="20" Width="272" Height="98" Background="Orange">
-                    <TextBlock TextAlignment="Center"  FontSize="24" VerticalAlignment="Center" Cursor="Hand" Text="Agregar proveedor" FontWeight="Bold" MouseLeftButtonUp="TextBlock_MouseLeftButtonUpAgregarProveedor" Foreground="#DDFFFFFF"></TextBlock>
-
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Height="343" Margin="197,41,190.6,36" Width="406">
+            <StackPanel Orientation="Horizontal" Background="#FFF3CE8B" Height="178" Margin="0,0,0.4,0">
+                <materialDesign:Card Padding="32" Margin="20,41,20,38.6" Width="363" Height="98" Background="Orange">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Cursor="Hand" MouseLeftButtonUp="TextBlock_MouseLeftButtonUpAgregarProveedor">
+                        <materialDesign:PackIcon Kind="AccountPlus" Width="32" Height="32" Margin="0 0 8 0" Foreground="White"/>
+                        <TextBlock TextAlignment="Center" FontSize="24" VerticalAlignment="Center" Text="Agregar proveedor" FontWeight="Bold" Foreground="#DDFFFFFF" Width="256"/>
+                    </StackPanel>
                 </materialDesign:Card>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Background="#FFDC7114">
-                <materialDesign:Card Padding="32" Margin="20" Width="272" Height="98" Background="#FFDC7114" >
-                    <TextBlock TextAlignment="Center"   FontSize="24" VerticalAlignment="Center" Cursor="Hand" FontWeight="Bold" Foreground="#DDFFFFFF" MouseLeftButtonUp="TextBlock_MouseLeftButtonUpVerProveedor"><Run Text="Ver proveedores"/><Run Text=" "/></TextBlock>
+            <StackPanel Orientation="Horizontal" Background="#FFFFAD66" Height="163" Margin="0,0,0.4,0">
+                <materialDesign:Card Padding="32" Margin="20" Width="364" Height="98" Background="#FFDC7114">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Cursor="Hand" MouseLeftButtonUp="TextBlock_MouseLeftButtonUpVerProveedor">
+                        <materialDesign:PackIcon Kind="AccountGroup" Width="32" Height="32" Margin="0 0 8 0" Foreground="White"/>
+                        <TextBlock TextAlignment="Center" FontSize="24" VerticalAlignment="Center" FontWeight="Bold" Foreground="#DDFFFFFF" Width="259">
+<Run Text="Ver proveedores"/>
+<Run Text=" "/>
+                        </TextBlock>
+                    </StackPanel>
                 </materialDesign:Card>
             </StackPanel>
         </StackPanel>
